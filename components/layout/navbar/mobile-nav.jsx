@@ -31,7 +31,10 @@ const MobileNav = () => {
             className="w-8"
             alt="logo"
           />
-          <span className="text-xl font-bold">Shadcn Blocks</span>
+          <p className="text-xl font-bold cursor-pointer">
+            Talent{" "}
+            <span className="text-orange-500 font-bold uppercase">Trail</span>
+          </p>
         </div>
         <Sheet>
           <SheetTrigger asChild>
@@ -48,12 +51,17 @@ const MobileNav = () => {
                     className="w-8"
                     alt="logo"
                   />
-                  <span className="text-xl font-bold">Shadcn Blocks</span>
+                  <p className="text-xl font-bold cursor-pointer">
+                    Talent{" "}
+                    <span className="text-orange-500 font-bold uppercase">
+                      Trail
+                    </span>
+                  </p>
                 </div>
               </SheetTitle>
             </SheetHeader>
             <div className="mb-8 mt-8 flex flex-col gap-4">
-              <a href="#" className="font-semibold">
+              <a href="#" className="font-semibold hover:text-orange-500">
                 Home
               </a>
               <Accordion type="single" collapsible className="w-full">
@@ -110,10 +118,10 @@ const MobileNav = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
-              <Link href="/pricing" className="font-semibold">
+              <Link href="/pricing" className="font-semibold hover:text-orange-500">
                 Pricing
               </Link>
-              <Link href="/blog" className="font-semibold">
+              <Link href="/blog" className="font-semibold hover:text-orange-500">
                 Blog
               </Link>
             </div>

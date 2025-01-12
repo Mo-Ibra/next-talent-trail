@@ -10,32 +10,34 @@ import {
 import { cn } from "@/lib/utils";
 import { subMenuItemsOne, subMenuItemsTwo } from "./subMenu";
 import Link from "next/link";
+import Image from "next/image";
 
 const DesktopNav = () => {
   return (
     <nav className="hidden justify-between lg:flex">
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-2">
-          <img
+          <Image
             src="https://shadcnblocks.com/images/block/block-1.svg"
-            className="w-8"
             alt="logo"
+            width={32}
+            height={32}
           />
-          <span className="text-xl font-bold">Shadcn Blocks</span>
+          <p className="text-xl font-bold cursor-pointer">
+            Talent{" "}
+            <span className="text-orange-500 font-bold uppercase">Trail</span>
+          </p>
         </div>
         <div className="flex items-center">
-          <a
+          <Link
             className={cn(
-              "text-muted-foreground",
-              navigationMenuTriggerStyle,
-              buttonVariants({
-                variant: "ghost",
-              })
+              "text-muted-foreground py-2 px-4 hover:text-orange-500",
+              navigationMenuTriggerStyle
             )}
             href="#"
           >
             Home
-          </a>
+          </Link>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem className="text-muted-foreground">
@@ -73,7 +75,7 @@ const DesktopNav = () => {
                   <ul className="w-80 p-3">
                     {subMenuItemsTwo.map((item, idx) => (
                       <li key={idx}>
-                        <a
+                        <Link
                           className={cn(
                             "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           )}
@@ -88,7 +90,7 @@ const DesktopNav = () => {
                               {item.description}
                             </p>
                           </div>
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -97,39 +99,32 @@ const DesktopNav = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <a
+          <Link
             className={cn(
-              "text-muted-foreground",
-              navigationMenuTriggerStyle,
-              buttonVariants({
-                variant: "ghost",
-              })
+              "text-muted-foreground py-2 px-4 hover:text-orange-500",
+              navigationMenuTriggerStyle
             )}
             href="#"
           >
             Pricing
-          </a>
-          <a
+          </Link>
+          <Link
             className={cn(
-              "text-muted-foreground",
-              navigationMenuTriggerStyle,
-              buttonVariants({
-                variant: "ghost",
-              })
+              "text-muted-foreground py-2 px-4 hover:text-orange-500",
+              navigationMenuTriggerStyle
             )}
             href="#"
           >
             Blog
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flex gap-2">
         <Button variant="outline">Log in</Button>
-        <Button>Sign up</Button>
+        <Button className="bg-orange-500">Sign up</Button>
       </div>
     </nav>
   );
 };
-
 
 export default DesktopNav;
