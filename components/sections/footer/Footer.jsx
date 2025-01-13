@@ -43,7 +43,7 @@ const Footer = () => {
                   alt="logo"
                   className="h-11"
                 />
-                <p className="text-3xl font-semibold">Shadcnblocks</p>
+                <p className="text-3xl font-semibold">Talent Trail</p>
               </span>
               <p className="mt-6 text-sm text-muted-foreground">
                 A collection of 100+ responsive HTML templates for your startup

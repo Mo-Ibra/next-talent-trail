@@ -114,7 +114,7 @@ function Testimonials1() {
         maskImage: "linear-gradient(to top,rgb(255 255 255/.3),black 800px)",
       }}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="text-center space-y-4 mb-12">
           <Badge variant="outline" className="text-orange-500">
             Testimonials
