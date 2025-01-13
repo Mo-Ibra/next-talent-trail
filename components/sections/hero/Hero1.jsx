@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const Hero1 = () => {
   return (
     <section className="py-12 grid justify-center items-center h-[92vh] relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           {/* Left Content */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">

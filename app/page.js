@@ -3,6 +3,8 @@ import Hero1 from "@/components/sections/hero/Hero1";
 import Features1 from "@/components/sections/features/Features1";
 import Testimonials1 from "@/components/sections/testimonials/Testimonials1";
 import Footer from "@/components/sections/footer/Footer";
+import Categories1 from "@/components/sections/categories/Categories1";
+import PopularJobs from "@/components/sections/popular-jobs/popular-jobs";
 
 
 function Home() {
@@ -10,8 +12,8 @@ function Home() {
     <>
       <Navbar />
       <Hero1 />
-      {/* Categories */}
-      {/* Popular Jobs */}
+      <Categories1 />
+      <PopularJobs />
       {/* <Features1 /> */}
       {/* Featured Jobs */}
       {/* <Testimonials1 /> */}
