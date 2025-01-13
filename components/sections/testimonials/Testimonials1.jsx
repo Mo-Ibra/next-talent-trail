@@ -1,13 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaTwitter } from "react-icons/fa";
+import { Badge } from "@/components/ui/badge";
+import { MapPin } from "lucide-react";
 
 const testimonials = [
   {
     author: {
       name: "Peter Lowe",
       handle: "@peterlowex",
-      image: "https://www.shadcnblocks.com/images/block/avatar-1.webp",
+      image: "/images/avatars/1.png",
       class: "rotate-2",
     },
     content:
@@ -18,7 +20,7 @@ const testimonials = [
     author: {
       name: "Rodri Alba",
       handle: "@rodri_spn",
-      image: "https://www.shadcnblocks.com/images/block/avatar-1.webp",
+      image: "/images/avatars/2.png",
       class: "-rotate-1",
     },
     content:
@@ -29,7 +31,7 @@ const testimonials = [
     author: {
       name: "Michele Lex",
       handle: "@MikyBrown",
-      image: "https://www.shadcnblocks.com/images/block/avatar-1.webp",
+      image: "/images/avatars/3.png",
       class: "-rotate-2",
     },
     content:
@@ -40,7 +42,7 @@ const testimonials = [
     author: {
       name: "Michael Ross",
       handle: "@michjack",
-      image: "https://www.shadcnblocks.com/images/block/avatar-1.webp",
+      image: "/images/avatars/3.png",
       class: "rotate-2",
     },
     content:
@@ -51,7 +53,7 @@ const testimonials = [
     author: {
       name: "Mike Bryan",
       handle: "@mike0point7",
-      image: "https://www.shadcnblocks.com/images/block/avatar-2.webp",
+      image: "/images/avatars/2.png",
       class: "-rotate-1",
     },
     content:
@@ -62,7 +64,7 @@ const testimonials = [
     author: {
       name: "Sarah Rodriguez",
       handle: "@sararodriguez",
-      image: "https://www.shadcnblocks.com/images/block/avatar-3.webp",
+      image: "/images/avatars/1.png",
       class: "-rotate-2",
     },
     content:
@@ -73,7 +75,7 @@ const testimonials = [
     author: {
       name: "Duncan Mitch",
       handle: "@lovingme_",
-      image: "https://www.shadcnblocks.com/images/block/avatar-1.webp",
+      image: "/images/avatars/2.png",
       class: "-rotate-3",
     },
     content:
@@ -84,7 +86,7 @@ const testimonials = [
     author: {
       name: "Kavisha Mills",
       handle: "@kavigirl99",
-      image: "https://www.shadcnblocks.com/images/block/avatar-2.webp",
+      image: "/images/avatars/1.png",
       class: "-rotate-1",
     },
     content:
@@ -95,7 +97,7 @@ const testimonials = [
     author: {
       name: "Dante Luzzi",
       handle: "@dante1987",
-      image: "https://www.shadcnblocks.com/images/block/avatar-3.webp",
+      image: "/images/avatars/3.png",
       class: "rotate-2",
     },
     content:
@@ -107,20 +109,21 @@ const testimonials = [
 function Testimonials1() {
   return (
     <section
-      className="py-16 px-4 md:px-6"
+      className="py-16 px-4 md:px-6 relative"
       style={{
         maskImage: "linear-gradient(to top,rgb(255 255 255/.3),black 800px)",
       }}
     >
       <div className="container mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our Students Say ?
+        <div className="text-center space-y-4 mb-12">
+          <Badge variant="outline" className="text-orange-500">
+            Testimonials
+          </Badge>
+          <h2 className="text-4xl font-bold">
+            Wow! We got an
+            <br />
+            Awesome testimonials
           </h2>
-          <p className="text-muted-foreground">
-            Discover a world of knowledge and opportunities with our online
-            education platform pursue a new career.
-          </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
@@ -166,6 +169,11 @@ function Testimonials1() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-96 h-96 bg-orange-500/20 opacity-40 -z-10 rounded-full blur-3xl bottom-2/4 right-2/4"></div>
+        <div className="absolute w-96 h-96 bg-orange-50 opacity rounded-full top-10 -right-52 -z-10"></div>
+        <MapPin className="absolute w-96 h-96 text-orange-500/5 -bottom-10 -left-20 -z-10" />
       </div>
     </section>
   );
