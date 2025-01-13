@@ -1,13 +1,14 @@
-import { ArrowDownRight, HandshakeIcon, MapPin } from "lucide-react";
+import { ArrowDownRight, ArrowBigUp, HandshakeIcon, MapPin, UploadCloud } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const Hero1 = () => {
   return (
-    <section className="py-32 grid justify-center items-center h-[92vh] relative">
+    <section className="py-12 grid justify-center items-center h-[92vh] relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-8 lg:grid-cols-2">
+          {/* Left Content */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <Badge variant="outline">
               New Release
@@ -18,8 +19,8 @@ const Hero1 = () => {
             </h1>
             <p className="max-w-xl text-muted-foreground lg:text-xl">
               Discover thousands of job listings from top companies around the
-              world. Search by keyword, category, or location and kickstart your
-              career now!
+              world. Search by keyword, category, or location, and kickstart
+              your career now!
             </p>
             <form className="w-full my-4">
               <input
@@ -38,16 +39,38 @@ const Hero1 = () => {
               </Button>
             </div>
           </div>
-          <div className="relative">
+
+          {/* Right Content (Image Section) */}
+          <div className="mx-auto relative my-4">
             <img
-              src="https://shadcnblocks.com/images/block/placeholder-1.svg"
+              src="/images/hero/4.png"
               alt="placeholder hero"
-              className="max-h-96 w-full rounded-md object-cover"
+              className="rounded-lg object-cover"
             />
-            <div className="absolute w-96 h-96 bg-orange-500/20 opacity-20 rounded-full blur-3xl top-0 right-0"></div>
+
+            {/* Card */}
+            <div className="absolute top-0 left-0 bg-white rounded-lg shadow-lg p-6 flex items-center gap-4 animate-bounce">
+              <div className="bg-orange-500/10 rounded-lg">
+                <ArrowBigUp className="size-10 text-orange-500" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold max-w-40">Find your great Job Today!</h3>
+              </div>
+            </div>
+
+            <div className="absolute bottom-0 right-0 bg-white rounded-lg shadow-lg p-6 flex items-center gap-4">
+              <div className="bg-orange-500/10 p-2 rounded-lg">
+                <UploadCloud className="size-10 text-orange-500" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold max-w-40">Upload Your CV it take just seconds!</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-96 h-96 bg-orange-500/20 opacity-20 rounded-full blur-3xl -top-10 -left-20"></div>
         <HandshakeIcon className="absolute w-96 h-96 text-orange-500/5 -bottom-10 -right-20 -z-10" />
