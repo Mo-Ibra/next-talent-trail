@@ -5,6 +5,7 @@ import Testimonials1 from "@/components/sections/testimonials/Testimonials1";
 import Footer from "@/components/sections/footer/Footer";
 import Categories1 from "@/components/sections/categories/Categories1";
 import PopularJobs from "@/components/sections/popular-jobs/popular-jobs";
+import FeaturedJobs from "@/components/sections/featured-jobs/featured-jobs";
 
 
 function Home() {
@@ -14,9 +15,10 @@ function Home() {
       <Hero1 />
       <Categories1 />
       <PopularJobs />
+      {/* FeaturedJobs */}
+      <FeaturedJobs />
       {/* <Features1 /> */}
-      {/* Featured Jobs */}
-      {/* <Testimonials1 /> */}
+      <Testimonials1 />
       {/* logos */}
       {/* Blog */}
       {/* Get App */}
