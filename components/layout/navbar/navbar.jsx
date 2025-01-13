@@ -4,7 +4,7 @@ import MobileNav from "./mobile-nav";
 const Navbar1 = () => {
   return (
     <section className="py-4">
-      <div className="container">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <DesktopNav />
         <MobileNav />
       </div>
