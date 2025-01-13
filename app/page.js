@@ -6,6 +6,7 @@ import Footer from "@/components/sections/footer/Footer";
 import Categories1 from "@/components/sections/categories/Categories1";
 import PopularJobs from "@/components/sections/popular-jobs/popular-jobs";
 import FeaturedJobs from "@/components/sections/featured-jobs/featured-jobs";
+import TopRecruiters from "@/components/sections/top-recruiters/top-recruiters";
 
 
 function Home() {
@@ -15,9 +16,8 @@ function Home() {
       <Hero1 />
       <Categories1 />
       <PopularJobs />
-      {/* FeaturedJobs */}
       <FeaturedJobs />
-      {/* <Features1 /> */}
+      <TopRecruiters />
       <Testimonials1 />
       {/* logos */}
       {/* Blog */}

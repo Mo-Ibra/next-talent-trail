@@ -141,7 +141,7 @@ function FeaturedJobs() {
           ))}
         </div>
 
-        <Button className=" bg-orange-500 mt-12 mx-auto flex justify-center">
+        <Button className=" bg-orange-600 hover:bg-orange-700 mt-12 mx-auto flex justify-center">
           Show More
         </Button>
       </div>

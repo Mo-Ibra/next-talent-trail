@@ -30,7 +30,7 @@ const Hero1 = () => {
               />
             </form>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button className="w-full bg-orange-500 sm:w-auto">
+              <Button className="w-full bg-orange-600 hover:bg-orange-700 sm:w-auto">
                 Search Now
               </Button>
               <Button variant="outline" className="w-full sm:w-auto">

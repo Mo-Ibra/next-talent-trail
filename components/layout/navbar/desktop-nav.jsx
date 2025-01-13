@@ -121,7 +121,7 @@ const DesktopNav = () => {
       </div>
       <div className="flex gap-2">
         <Button variant="outline">Log in</Button>
-        <Button className="bg-orange-500">Sign up</Button>
+        <Button className="bg-orange-600 hover:bg-orange-700">Sign up</Button>
       </div>
     </nav>
   );
