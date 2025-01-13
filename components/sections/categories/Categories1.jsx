@@ -60,7 +60,7 @@ function Categories1() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category, index) => (
-            <Card 
+            <Card
               key={index} 
               className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
             >

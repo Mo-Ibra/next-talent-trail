@@ -12,19 +12,20 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import Link from "next/link";
 
 const data = [
   {
     id: "item-1",
-    title: "Duis sem sem, gravida vel porttitor eu, volutpat ut arcu",
+    title: "15 Tips for Better Product Photography Right Now",
     summary:
-      "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
+      "A metus platea vel tincidunt sed, blandit. Sed et mauris pharetra, tincidunt sem at, elementum nisl. Sed et mauris pharetra, tincidunt sem at, elementum nisl.",
     href: "#",
     image: "/images/blog/news-1.jpg",
   },
   {
     id: "item-2",
-    title: "Duis sem sem, gravida vel porttitor eu, volutpat ut arcu",
+    title: "Job Interview Secrets: How to Land Your Dream Job",
     summary:
       "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
     href: "#",
@@ -32,7 +33,7 @@ const data = [
   },
   {
     id: "item-3",
-    title: "Duis sem sem, gravida vel porttitor eu, volutpat ut arcu",
+    title: "How to Build a Successful Freelance Business",
     summary:
       "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
     href: "#",
@@ -40,7 +41,7 @@ const data = [
   },
   {
     id: "item-4",
-    title: "Duis sem sem, gravida vel porttitor eu, volutpat ut arcu",
+    title: "What You Need to Know About Freelancing",
     summary:
       "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
     href: "#",
@@ -48,7 +49,7 @@ const data = [
   },
   {
     id: "item-5",
-    title: "Duis sem sem, gravida vel porttitor eu, volutpat ut arcu",
+    title: "Does Freelancing Make You Money online?",
     summary:
       "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
     href: "#",
@@ -57,7 +58,6 @@ const data = [
 ];
 
 const Blog = () => {
-
   const [carouselApi, setCarouselApi] = useState();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -88,9 +88,7 @@ const Blog = () => {
             <Badge variant="outline" className="text-orange-500">
               Tag Line
             </Badge>
-            <h2 className="font-semibold md:text-4xl my-2">
-              Latest Articles
-            </h2>
+            <h2 className="font-semibold md:text-4xl my-2">Latest Articles</h2>
             <a
               href="#"
               className="group flex items-center text-xs font-medium md:text-base lg:text-lg"
@@ -142,10 +140,7 @@ const Blog = () => {
                 key={item.id}
                 className="pl-[20px] md:max-w-[452px]"
               >
-                <a
-                  href={item.href}
-                  className="group flex flex-col justify-between"
-                >
+                <div className="group flex flex-col justify-between">
                   <div>
                     <div className="flex aspect-[3/2] overflow-clip rounded-xl">
                       <div className="flex-1">
@@ -160,17 +155,23 @@ const Blog = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
+                  <Link
+                    className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl"
+                    href={item.href}
+                  >
                     {item.title}
-                  </div>
+                  </Link>
                   <div className="mb-8 line-clamp-2 text-sm text-muted-foreground md:mb-12 md:text-base lg:mb-9">
                     {item.summary}
                   </div>
-                  <div className="flex items-center text-sm">
+                  <Link
+                    className="flex items-center text-sm hover:text-orange-500"
+                    href={item.href}
+                  >
                     Read more{" "}
-                    <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </a>
+                    <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1 text-orange-500" />
+                  </Link>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>

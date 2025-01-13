@@ -33,7 +33,7 @@ const sections = [
 const Footer = () => {
   return (
     <section className="py-32">
-      <footer className="container mx-auto">
+      <footer className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex flex-col items-center justify-between gap-10 text-center lg:flex-row lg:text-left">
           <div className="flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start">
             <div>
