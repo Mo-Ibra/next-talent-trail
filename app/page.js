@@ -10,7 +10,6 @@ import Logos from "@/components/sections/logos/Logos";
 import Blog from "@/components/sections/blog/blog";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
-
 function Home() {
   return (
     <>
