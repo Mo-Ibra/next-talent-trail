@@ -4,7 +4,6 @@ import Footer from "@/components/sections/footer/Footer";
 
 
 function SignUpPage() {
-
   return (
     <>
       <Navbar />
