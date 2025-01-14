@@ -1,9 +1,18 @@
-const Page = () => {
+import Breadcrumb from "@/components/common/bread-crumb";
+import Navbar from "@/components/layout/navbar/navbar";
+import ForgetPassword from "@/components/sections/auth/forget-password";
+import Footer from "@/components/sections/footer/Footer";
+
+
+function ForgetPasswordPage() {
+
   return (
-    <div>
-      <h1>Forget Password</h1>
-    </div>
-  )
+    <>
+      <Navbar />
+      <ForgetPassword />
+      <Footer />
+    </>
+  );
 }
 
-export default Page;
+export default ForgetPasswordPage;
