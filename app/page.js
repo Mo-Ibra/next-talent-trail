@@ -10,12 +10,14 @@ import Logos from "@/components/sections/logos/Logos";
 import Blog from "@/components/sections/blog/blog";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
+import { homeCategories } from "@/data/categories";
+
 function Home() {
   return (
     <>
       <Navbar />
       <Hero1 />
-      <Categories1 />
+      <Categories1 categories={homeCategories} />
       <PopularJobs />
       <FeaturedJobs />
       <TopRecruiters />
