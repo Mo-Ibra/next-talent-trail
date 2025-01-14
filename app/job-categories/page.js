@@ -6,7 +6,7 @@ import Footer from "@/components/sections/footer/Footer";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
-import { jobCategories } from "@/data/categories";
+import { categories } from "@/data/categories";
 
 function JobCategoriesPage() {
   const breadcrumbItems = [
@@ -21,7 +21,7 @@ function JobCategoriesPage() {
         items={breadcrumbItems}
         background="/images/breadcrumb/3.png"
       />
-      <Categories1 categories={jobCategories} />
+      <Categories1 categories={categories} />
       <Logos />
       <Subscribe />
       <Blog />

@@ -13,7 +13,7 @@ import {
   Shield,
 } from "lucide-react";
 
-export const homeCategories = [
+export const categories = [
   {
     icon: <Palette className="w-6 h-6 text-orange-500" />,
     title: "Design",
@@ -54,10 +54,6 @@ export const homeCategories = [
     title: "Human Resources",
     courses: "50+ Jobs Available",
   },
-];
-
-export const jobCategories = [
-  ...homeCategories,
   {
     icon: <DollarSign className="w-6 h-6 text-orange-500" />,
     title: "Sales",
