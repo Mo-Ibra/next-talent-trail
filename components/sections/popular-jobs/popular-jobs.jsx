@@ -187,7 +187,7 @@ function PopularJobs() {
                       </div>
                     </div>
                     <Button variant="outline">
-                      Apply Job
+                      Apply Now
                       <LucideArrowUp className="ml-2 size-4" />
                     </Button>
                   </div>

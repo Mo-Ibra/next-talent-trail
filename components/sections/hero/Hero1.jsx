@@ -1,7 +1,14 @@
-import { ArrowDownRight, ArrowBigUp, HandshakeIcon, MapPin, UploadCloud } from "lucide-react";
+import {
+  ArrowDownRight,
+  ArrowBigUp,
+  HandshakeIcon,
+  MapPin,
+  UploadCloud,
+} from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Hero1 = () => {
   return (
@@ -33,10 +40,12 @@ const Hero1 = () => {
               <Button className="w-full bg-orange-600 hover:bg-orange-700 sm:w-auto">
                 Search Now
               </Button>
-              <Button variant="outline" className="w-full sm:w-auto">
-                Browse By Categories
-                <ArrowDownRight className="ml-2 size-4" />
-              </Button>
+              <Link href="/job-categories">
+                <Button variant="outline" className="w-full sm:w-auto">
+                  Browse By Categories
+                  <ArrowDownRight className="ml-2 size-4" />
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -54,7 +63,9 @@ const Hero1 = () => {
                 <ArrowBigUp className="size-10 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold max-w-40">Find your great Job Today!</h3>
+                <h3 className="text-sm font-semibold max-w-40">
+                  Find your great Job Today!
+                </h3>
               </div>
             </div>
 
@@ -63,7 +74,9 @@ const Hero1 = () => {
                 <UploadCloud className="size-10 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold max-w-40">Upload Your CV it take just seconds!</h3>
+                <h3 className="text-sm font-semibold max-w-40">
+                  Upload Your CV it take just seconds!
+                </h3>
               </div>
             </div>
           </div>
