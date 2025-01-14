@@ -17,7 +17,7 @@ export const subMenuItemsOne = [
     title: "Careers",
     description: "Browse job listing and discover our workspace",
     icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
-    href: "/careers",
+    href: "/career",
   },
   {
     title: "Support",

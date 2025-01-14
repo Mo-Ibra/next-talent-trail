@@ -1,4 +1,4 @@
-import { Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,7 +16,7 @@ const DesktopNav = () => {
   return (
     <nav className="hidden justify-between lg:flex">
       <div className="flex items-center gap-6">
-        <div className="flex items-center gap-2">
+        <Link className="flex items-center gap-2" href="/">
           <Image
             src="https://shadcnblocks.com/images/block/block-1.svg"
             alt="logo"
@@ -27,14 +27,14 @@ const DesktopNav = () => {
             Talent{" "}
             <span className="text-orange-500 font-bold uppercase">Trail</span>
           </p>
-        </div>
+        </Link>
         <div className="flex items-center">
           <Link
             className={cn(
               "text-muted-foreground py-2 px-4 hover:text-orange-500",
               navigationMenuTriggerStyle
             )}
-            href="#"
+            href="/"
           >
             Home
           </Link>
@@ -79,7 +79,7 @@ const DesktopNav = () => {
                           className={cn(
                             "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           )}
-                          href="#"
+                          href={item.href}
                         >
                           {item.icon}
                           <div>
@@ -104,7 +104,7 @@ const DesktopNav = () => {
               "text-muted-foreground py-2 px-4 hover:text-orange-500",
               navigationMenuTriggerStyle
             )}
-            href="#"
+            href="/pricing"
           >
             Pricing
           </Link>
@@ -113,15 +113,19 @@ const DesktopNav = () => {
               "text-muted-foreground py-2 px-4 hover:text-orange-500",
               navigationMenuTriggerStyle
             )}
-            href="#"
+            href="/blog"
           >
             Blog
           </Link>
         </div>
       </div>
       <div className="flex gap-2">
-        <Button variant="outline">Log in</Button>
-        <Button className="bg-orange-600 hover:bg-orange-700">Sign up</Button>
+        <Link href="/auth/login">
+          <Button variant="outline">Log in</Button>
+        </Link>
+        <Link href="/auth/sign-up">
+          <Button className="bg-orange-600 hover:bg-orange-700">Sign up</Button>
+        </Link>
       </div>
     </nav>
   );
