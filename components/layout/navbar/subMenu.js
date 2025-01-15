@@ -8,10 +8,10 @@ export const subMenuItemsOne = [
     href: "/blog",
   },
   {
-    title: "Compnay",
+    title: "Companies",
     description: "Our mission is to innovate and empower the world",
     icon: <Trees className="size-5 shrink-0 text-orange-500" />,
-    href: "/company",
+    href: "/companies",
   },
   {
     title: "Careers",

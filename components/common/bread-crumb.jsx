@@ -20,7 +20,7 @@ function Breadcrumb({
       </div>
 
       {/* Breadcrumb Content */}
-      <div className="container mx-auto sm:px-6 lg:px-8 relative z-10 px-4 md:px-6">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-12 relative md:px-6">
         <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
           {items[items.length - 1].title}
         </h1>
