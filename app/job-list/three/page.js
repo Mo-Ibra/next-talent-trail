@@ -2,6 +2,7 @@ import Breadcrumb from "@/components/common/bread-crumb";
 import Navbar from "@/components/layout/navbar/navbar";
 import Blog from "@/components/sections/blog/blog";
 import Footer from "@/components/sections/footer/Footer";
+import JobListSidebar1 from "@/components/sections/job-list/JobListSidebar1";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
@@ -19,6 +20,7 @@ function JobListThreePage() {
         items={breadcrumbItems}
         background="/images/breadcrumb/3.png"
       />
+      <JobListSidebar1 />
       <Logos />
       <Subscribe />
       <Blog />

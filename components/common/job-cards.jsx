@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { LucideArrowUp, Clock, Check } from "lucide-react";
+import { LucideArrowUp, Clock, Check, ArrowUpRight, Star } from "lucide-react";
 
 const avatars = [
   "/images/avatars/1.png",
@@ -41,7 +41,7 @@ export const ContentFulJobCard = ({ job }) => {
               </div>
             </div>
             <Badge variant="outline" className="text-muted-foreground">
-              ${job.salary}/hour
+              ${job.salary}/month
             </Badge>
           </div>
 
@@ -144,6 +144,82 @@ export const BasicJobCard = ({ job }) => {
       >
         <Check className="text-orange-500 font-bold" />
       </Button>
+    </Card>
+  );
+};
+
+export const BasicJobCardWithRating = ({ job }) => {
+  return (
+    <Card
+      key={job.id}
+      className="p-6 hover:shadow-lg duration-200 cursor-pointer"
+    >
+      <div className="flex items-start justify-between">
+        <div className="flex gap-4">
+          <div className="h-12 w-12 overflow-hidden">
+            <img
+              src={job.company.logo || "/placeholder.svg"}
+              alt={`${job.company.name} logo`}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="space-y-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <h3 className="font-semibold">{job.company.name}</h3>
+                <span className="text-sm text-muted-foreground">
+                  {job.postedAt}
+                </span>
+              </div>
+              <h2 className="text-xl font-semibold">{job.title}</h2>
+              <p className="text-sm text-muted-foreground">
+                Total Openings: {job.applicants}
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              {job.verified && (
+                <Badge
+                  variant="secondary"
+                  className="bg-orange-50 text-orange-600"
+                >
+                  Verified
+                </Badge>
+              )}
+              <div className="flex items-center">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`h-4 w-4 ${
+                      i < Math.floor(job.rating)
+                        ? "fill-orange-400 text-orange-400"
+                        : "fill-gray-200 text-gray-200"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-end gap-4">
+          <Button
+            size="icon"
+            variant="ghost"
+            className="rounded-full shadow-sm border"
+          >
+            <ArrowUpRight className="h-4 w-4" />
+          </Button>
+          <div className="flex items-center gap-4">
+            <div className="text-right">
+              <div className="flex items-center gap-1 text-orange-600 justify-end">
+                <span className="text-lg font-semibold">${job.salary}</span>
+              </div>
+              <div className="flex items-center gap-1 text-muted-foreground">
+                <span>{job.company.location}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Card>
   );
 };

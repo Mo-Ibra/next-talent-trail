@@ -14,6 +14,7 @@ export const jobs = [
     applicants: 14,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "4 Minutes ago",
+    rating: 4,
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ export const jobs = [
     applicants: 56,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "30 Minutes ago",
+    rating: 5,
   },
   {
     id: 3,
@@ -46,6 +48,7 @@ export const jobs = [
     applicants: 200,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "2 Hours ago",
+    rating: 3,
   },
   {
     id: 4,
@@ -62,6 +65,7 @@ export const jobs = [
     applicants: 14,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "7 Hours ago",
+    rating: 4,
   },
   {
     id: 5,
@@ -78,6 +82,7 @@ export const jobs = [
     applicants: 200,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "12 Hours ago",
+    rating: 5,
   },
   {
     id: 6,
@@ -94,6 +99,7 @@ export const jobs = [
     applicants: 14,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "17 Hours ago",
+    rating: 4,
   },
   {
     id: 7,
@@ -109,6 +115,7 @@ export const jobs = [
     applicants: 14,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "21 Hours ago",
+    rating: 5,
   },
   {
     id: 8,
@@ -125,6 +132,7 @@ export const jobs = [
     applicants: 14,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "23 Hours ago",
+    rating: 4,
   },
   {
     id: 9,
@@ -141,6 +149,7 @@ export const jobs = [
     applicants: 14,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "1 day ago",
+    rating: 5,
   },
   {
     id: 10,
@@ -157,6 +166,7 @@ export const jobs = [
     applicants: 15,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "1 day ago",
+    rating: 4,
   },
   {
     id: 11,
@@ -173,6 +183,7 @@ export const jobs = [
     applicants: 11,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "2 days ago",
+    rating: 5,
   },
   {
     id: 12,
@@ -189,5 +200,6 @@ export const jobs = [
     applicants: 20,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "3 days ago",
+    rating: 4,
   },
 ];
