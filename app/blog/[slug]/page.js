@@ -11,7 +11,7 @@ import { useParams } from "next/navigation";
 import { blogPosts } from "@/data/blog-posts";
 
 function SingleBlogPage() {
-  
+
   const { slug } = useParams();
   const blogPost = blogPosts.find((post) => post.slug === slug);
 

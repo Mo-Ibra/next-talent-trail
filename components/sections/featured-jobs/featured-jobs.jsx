@@ -1,71 +1,8 @@
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from "lucide-react";
 
-const jobs = [
-  {
-    company: {
-      name: "Pinterest",
-      logo: "/images/logos/1-1.png",
-      location: "Washington U.S.A.",
-    },
-    title: "Backend Developer",
-    salary: 130,
-    postedTime: "1 Day ago",
-  },
-  {
-    company: {
-      name: "Yahoo!",
-      logo: "/images/logos/1-2.png",
-      location: "Washington U.S.A.",
-    },
-    title: "Backend Developer",
-    salary: 130,
-    postedTime: "1 Day ago",
-  },
-  {
-    company: {
-      name: "google",
-      logo: "/images/logos/1-3.png",
-      location: "Washington U.S.A.",
-    },
-    title: "Backend Developer",
-    salary: 130,
-    postedTime: "1 Day ago",
-  },
-  {
-    company: {
-      name: "Amazon",
-      logo: "/images/logos/1-4.png",
-      location: "Washington U.S.A.",
-    },
-    title: "Senior Backend Developer",
-    salary: 4000,
-    postedTime: "3 Day ago",
-  },
-  {
-    company: {
-      name: "Meta",
-      logo: "/images/logos/1-5.png",
-      location: "Washington U.S.A.",
-    },
-    title: "Product Designer",
-    salary: 6000,
-    postedTime: "12 Day ago",
-  },
-  {
-    company: {
-      name: "google",
-      logo: "/images/logos/1-6.png",
-      location: "Washington U.S.A.",
-    },
-    title: "Sales Manager",
-    salary: 130,
-    postedTime: "5 Day ago",
-  },
-];
+import { jobs } from "@/data/jobs";
+import { BasicJobCard } from "@/components/common/job-cards";
 
 function FeaturedJobs() {
   return (
@@ -83,61 +20,8 @@ function FeaturedJobs() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {jobs.map((job, index) => (
-            <Card key={index} className="bg-white relative">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  {/* Job Type and Time */}
-                  <div className="flex justify-between items-center text-sm">
-                    <Badge
-                      variant="secondary"
-                      className="bg-orange-50 text-orange-500"
-                    >
-                      Full Time
-                    </Badge>
-                    <Badge variant="outline" className="text-muted-foreground">
-                      {job.postedTime}
-                    </Badge>
-                  </div>
-
-                  {/* Company Info */}
-                  <div className="flex items-center gap-3">
-                    <div className="relative w-12 h-12">
-                      <Image
-                        src={job.company.logo}
-                        alt={job.company.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="font-medium">{job.company.name}</h3>
-                      <p className="text-sm text-muted-foreground">
-                        {job.company.location}
-                      </p>
-                    </div>
-                  </div>
-
-                  <hr />
-
-                  {/* Job Title */}
-                  <div>
-                    <h4 className="text-lg font-semibold">{job.title}</h4>
-                    <p className="text-orange-500 font-medium">
-                      ${job.salary}/Month
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-
-              {/* Action Button */}
-              <Button
-                size="icon"
-                className="absolute -bottom-5 right-2/4 rounded-full w-10 h-10 bg-orange-50 hover:bg-orange-100"
-              >
-                <Check className="text-orange-500 font-bold" />
-              </Button>
-            </Card>
+          {jobs.map((job) => (
+            <BasicJobCard job={job} key={job.id} />
           ))}
         </div>
 
