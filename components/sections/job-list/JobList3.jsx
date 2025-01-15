@@ -1,13 +1,13 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { BasicJobCard } from "@/components/common/job-cards";
+import { BasicJobCardWithRating } from "@/components/common/job-cards";
 
 import { jobs } from "@/data/jobs";
 import { Pagination } from "@/components/common/pagination";
 import { useState } from "react";
 
-const JobList2 = () => {
+const JobList3 = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -25,9 +25,9 @@ const JobList2 = () => {
           </h2>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
           {jobs.map((job) => (
-            <BasicJobCard key={job.id} job={job} />
+            <BasicJobCardWithRating key={job.id} job={job} />
           ))}
         </div>
         <Pagination
@@ -41,4 +41,4 @@ const JobList2 = () => {
   );
 };
 
-export default JobList2;
+export default JobList3;

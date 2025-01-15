@@ -2,15 +2,15 @@ import Breadcrumb from "@/components/common/bread-crumb";
 import Navbar from "@/components/layout/navbar/navbar";
 import Blog from "@/components/sections/blog/blog";
 import Footer from "@/components/sections/footer/Footer";
-import JobListSidebar3 from "@/components/sections/job-list/JobListSidebar3";
+import JobListSidebar2 from "@/components/sections/job-list/JobListSidebar2";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
-function JobListFourPage() {
+function JobListFivePage() {
 
   const breadcrumbItems = [
     { title: "Home", href: "/" },
-    { title: "Job List", href: "/job-list-three" },
+    { title: "Job List", href: "/job-list-five" },
   ];
 
   return (
@@ -20,7 +20,7 @@ function JobListFourPage() {
         items={breadcrumbItems}
         background="/images/breadcrumb/3.png"
       />
-      <JobListSidebar3 />
+      <JobListSidebar2 />
       <Logos />
       <Subscribe />
       <Blog />
@@ -29,4 +29,4 @@ function JobListFourPage() {
   );
 }
 
-export default JobListFourPage;
+export default JobListFivePage;

@@ -14,7 +14,6 @@ function JobListSidebar1() {
     <section className="py-16 px-4 md:px-6">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid gap-8 lg:grid-cols-[320px,1fr]">
-          
           {/* Sidebar */}
           <JobSidebar />
 

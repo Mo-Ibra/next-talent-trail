@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/common/bread-crumb";
 import Navbar from "@/components/layout/navbar/navbar";
 import Blog from "@/components/sections/blog/blog";
 import Footer from "@/components/sections/footer/Footer";
-import JobListSidebar1 from "@/components/sections/job-list/JobListSidebar1";
+import JobList3 from "@/components/sections/job-list/JobList3";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
@@ -10,7 +10,7 @@ function JobListThreePage() {
 
   const breadcrumbItems = [
     { title: "Home", href: "/" },
-    { title: "Job List", href: "/job-list-three" },
+    { title: "Job List", href: "/job-list-two" },
   ];
 
   return (
@@ -20,7 +20,7 @@ function JobListThreePage() {
         items={breadcrumbItems}
         background="/images/breadcrumb/3.png"
       />
-      <JobListSidebar1 />
+      <JobList3 />
       <Logos />
       <Subscribe />
       <Blog />
