@@ -6,7 +6,7 @@ import JobList1 from "@/components/sections/job-list/JobList1";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
-function JobListOne() {
+function JobListOnePage() {
 
   const breadcrumbItems = [
     { title: "Home", href: "/" },
@@ -29,4 +29,4 @@ function JobListOne() {
   );
 }
 
-export default JobListOne;
+export default JobListOnePage;
