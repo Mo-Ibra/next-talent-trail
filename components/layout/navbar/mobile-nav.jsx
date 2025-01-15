@@ -124,6 +124,9 @@ const MobileNav = () => {
               <Link href="/blog" className="font-semibold hover:text-orange-500">
                 Blog
               </Link>
+              <Link href="/about-us" className="font-semibold hover:text-orange-500">
+                About Us
+              </Link>
             </div>
           </SheetContent>
         </Sheet>

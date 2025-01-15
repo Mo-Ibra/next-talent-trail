@@ -117,6 +117,15 @@ const DesktopNav = () => {
           >
             Blog
           </Link>
+          <Link
+            className={cn(
+              "text-muted-foreground py-2 px-4 hover:text-orange-500",
+              navigationMenuTriggerStyle
+            )}
+            href="/about-us"
+          >
+            About Us
+          </Link>
         </div>
       </div>
       <div className="flex gap-2">
