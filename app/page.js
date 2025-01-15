@@ -11,17 +11,20 @@ import Blog from "@/components/sections/blog/blog";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
 import { categories } from "@/data/categories";
+import { jobs } from "@/data/jobs";
 
 function Home() {
 
   const renderedCategories = categories.slice(0, 8);
+
+  const renderedJobs = jobs.slice(0, 6);
 
   return (
     <>
       <Navbar />
       <Hero1 />
       <Categories1 categories={renderedCategories} />
-      <PopularJobs />
+      <PopularJobs jobs={renderedJobs} />
       <FeaturedJobs />
       <TopRecruiters />
       <Testimonials1 />
