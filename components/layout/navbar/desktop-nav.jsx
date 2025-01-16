@@ -8,7 +8,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { subMenuItemsOne, subMenuItemsTwo } from "./subMenu";
+import { subMenuItemsOne, subMenuItemsThree, subMenuItemsTwo } from "./subMenu";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -43,7 +43,7 @@ const DesktopNav = () => {
               <NavigationMenuItem className="text-muted-foreground">
                 <NavigationMenuTrigger>Jobs</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="w-80 p-3">
+                  <ul className="min-w-52 p-3">
                     {subMenuItemsOne.map((item, idx) => (
                       <li key={idx}>
                         <Link
@@ -57,9 +57,6 @@ const DesktopNav = () => {
                             <div className="text-sm font-semibold">
                               {item.title}
                             </div>
-                            <p className="text-sm leading-snug text-muted-foreground">
-                              {item.description}
-                            </p>
                           </div>
                         </Link>
                       </li>
@@ -70,7 +67,7 @@ const DesktopNav = () => {
               <NavigationMenuItem className="text-muted-foreground">
                 <NavigationMenuTrigger>Pages</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="w-80 p-3">
+                  <ul className="min-w-52 p-3">
                     {subMenuItemsTwo.map((item, idx) => (
                       <li key={idx}>
                         <Link
@@ -84,9 +81,30 @@ const DesktopNav = () => {
                             <div className="text-sm font-semibold">
                               {item.title}
                             </div>
-                            <p className="text-sm leading-snug text-muted-foreground">
-                              {item.description}
-                            </p>
+                          </div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="text-muted-foreground">
+                <NavigationMenuTrigger>Utils</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="min-w-52 p-3">
+                    {subMenuItemsThree.map((item, idx) => (
+                      <li key={idx}>
+                        <Link
+                          className={cn(
+                            "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          )}
+                          href={item.href}
+                        >
+                          {item.icon}
+                          <div>
+                            <div className="text-sm font-semibold">
+                              {item.title}
+                            </div>
                           </div>
                         </Link>
                       </li>

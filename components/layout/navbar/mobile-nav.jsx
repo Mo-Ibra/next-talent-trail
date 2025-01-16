@@ -19,7 +19,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { subMenuItemsOne, subMenuItemsTwo } from "./subMenu";
+import { subMenuItemsOne, subMenuItemsThree, subMenuItemsTwo } from "./subMenu";
 
 const MobileNav = () => {
   return (
@@ -65,7 +65,7 @@ const MobileNav = () => {
                 Home
               </a>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="products" className="border-b-0">
+                <AccordionItem value="jobs" className="border-b-0">
                   <AccordionTrigger className="mb-4 py-0 font-semibold hover:no-underline">
                     Jobs
                   </AccordionTrigger>
@@ -83,16 +83,13 @@ const MobileNav = () => {
                           <div className="text-sm font-semibold">
                             {item.title}
                           </div>
-                          <p className="text-sm leading-snug text-muted-foreground">
-                            {item.description}
-                          </p>
                         </div>
                       </Link>
                     ))}
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="resources" className="border-b-0">
-                  <AccordionTrigger className="py-0 font-semibold hover:no-underline">
+                <AccordionItem value="pages" className="border-b-0">
+                  <AccordionTrigger className="mb-4 py-0 font-semibold hover:no-underline">
                     Pages
                   </AccordionTrigger>
                   <AccordionContent className="mt-2">
@@ -109,16 +106,39 @@ const MobileNav = () => {
                           <div className="text-sm font-semibold">
                             {item.title}
                           </div>
-                          <p className="text-sm leading-snug text-muted-foreground">
-                            {item.description}
-                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="utils" className="border-b-0">
+                  <AccordionTrigger className="py-0 font-semibold hover:no-underline">
+                    Utils
+                  </AccordionTrigger>
+                  <AccordionContent className="mt-2">
+                    {subMenuItemsThree.map((item, idx) => (
+                      <Link
+                        key={idx}
+                        className={cn(
+                          "flex select-none gap-4 rounded-md p-3 leading-none outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        )}
+                        href={item.href}
+                      >
+                        {item.icon}
+                        <div>
+                          <div className="text-sm font-semibold">
+                            {item.title}
+                          </div>
                         </div>
                       </Link>
                     ))}
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
-              <Link href="/contact-us" className="font-semibold hover:text-orange-500">
+              <Link
+                href="/contact-us"
+                className="font-semibold hover:text-orange-500"
+              >
                 Contact Us
               </Link>
             </div>
