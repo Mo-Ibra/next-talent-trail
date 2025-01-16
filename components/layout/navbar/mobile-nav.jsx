@@ -67,7 +67,7 @@ const MobileNav = () => {
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="products" className="border-b-0">
                   <AccordionTrigger className="mb-4 py-0 font-semibold hover:no-underline">
-                    Products
+                    Jobs
                   </AccordionTrigger>
                   <AccordionContent className="mt-2">
                     {subMenuItemsOne.map((item, idx) => (
@@ -93,7 +93,7 @@ const MobileNav = () => {
                 </AccordionItem>
                 <AccordionItem value="resources" className="border-b-0">
                   <AccordionTrigger className="py-0 font-semibold hover:no-underline">
-                    Resources
+                    Pages
                   </AccordionTrigger>
                   <AccordionContent className="mt-2">
                     {subMenuItemsTwo.map((item, idx) => (
@@ -118,14 +118,8 @@ const MobileNav = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
-              <Link href="/pricing" className="font-semibold hover:text-orange-500">
-                Pricing
-              </Link>
-              <Link href="/blog" className="font-semibold hover:text-orange-500">
-                Blog
-              </Link>
-              <Link href="/about-us" className="font-semibold hover:text-orange-500">
-                About Us
+              <Link href="/contact-us" className="font-semibold hover:text-orange-500">
+                Contact Us
               </Link>
             </div>
           </SheetContent>

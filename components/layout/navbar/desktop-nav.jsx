@@ -41,9 +41,7 @@ const DesktopNav = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem className="text-muted-foreground">
-                <NavigationMenuTrigger>
-                  <span>Products</span>
-                </NavigationMenuTrigger>
+                <NavigationMenuTrigger>Jobs</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="w-80 p-3">
                     {subMenuItemsOne.map((item, idx) => (
@@ -70,7 +68,7 @@ const DesktopNav = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem className="text-muted-foreground">
-                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Pages</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="w-80 p-3">
                     {subMenuItemsTwo.map((item, idx) => (
@@ -98,33 +96,14 @@ const DesktopNav = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-
           <Link
             className={cn(
               "text-muted-foreground py-2 px-4 hover:text-orange-500",
               navigationMenuTriggerStyle
             )}
-            href="/pricing"
+            href="/contact-us"
           >
-            Pricing
-          </Link>
-          <Link
-            className={cn(
-              "text-muted-foreground py-2 px-4 hover:text-orange-500",
-              navigationMenuTriggerStyle
-            )}
-            href="/blog"
-          >
-            Blog
-          </Link>
-          <Link
-            className={cn(
-              "text-muted-foreground py-2 px-4 hover:text-orange-500",
-              navigationMenuTriggerStyle
-            )}
-            href="/about-us"
-          >
-            About Us
+            Contact Us
           </Link>
         </div>
       </div>

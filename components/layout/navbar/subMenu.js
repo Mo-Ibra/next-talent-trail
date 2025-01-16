@@ -2,10 +2,61 @@ import { Book, Sunset, Trees, Zap } from "lucide-react";
 
 export const subMenuItemsOne = [
   {
+    title: "Categories",
+    description: "Here you can find a job category that fits your needs",
+    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    href: "/job-categories",
+  },
+  {
+    title: "Job List One",
+    description: "Browse job listing and discover our workspace",
+    icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
+    href: "/job-list/one",
+  },
+  {
+    title: "Job List Two",
+    description: "Browse job listing and discover our workspace",
+    icon: <Trees className="size-5 shrink-0 text-orange-500" />,
+    href: "/job-list/two",
+  },
+  {
+    title: "Job List Three",
+    description: "Browse job listing and discover our workspace",
+    icon: <Book className="size-5 shrink-0 text-orange-500" />,
+    href: "/job-list/three",
+  },
+  {
+    title: "Job List Four",
+    description: "Browse job listing and discover our workspace",
+    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    href: "/job-list/four",
+  },
+  {
+    title: "Job List Five",
+    description: "Browse job listing and discover our workspace",
+    icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
+    href: "/job-list/five",
+  },
+  {
+    title: "Job List Six",
+    description: "Browse job listing and discover our workspace",
+    icon: <Trees className="size-5 shrink-0 text-orange-500" />,
+    href: "/job-list/six",
+  },
+];
+
+export const subMenuItemsTwo = [
+  {
     title: "Blog",
     description: "The latest industry news, updates, and info",
     icon: <Book className="size-5 shrink-0 text-orange-500" />,
     href: "/blog",
+  },
+  {
+    title: "Blog Detail",
+    description: "The latest industry news, updates, and info",
+    icon: <Book className="size-5 shrink-0 text-orange-500" />,
+    href: "/blog/digitalocean-launches-first-canadian-data-centre-in-toronto",
   },
   {
     title: "Companies",
@@ -15,42 +66,20 @@ export const subMenuItemsOne = [
   },
   {
     title: "Careers",
-    description: "Browse job listing and discover our workspace",
+    description: "What about working with us? We would love to hear from you",
     icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
     href: "/career",
   },
   {
-    title: "Support",
-    description:
-      "Get in touch with our support team or visit our community forums",
+    title: "Pricing",
+    description: "Here you can find pricing plans and packages",
     icon: <Zap className="size-5 shrink-0 text-orange-500" />,
-    href: "/support",
+    href: "/pricing",
   },
-];
-
-export const subMenuItemsTwo = [
   {
-    title: "Help Center",
-    description: "Get all the answers you need right here",
+    title: "About Us",
+    description: "Here you can find everything you need to know",
     icon: <Zap className="size-5 shrink-0 text-orange-500" />,
-    href: "/help",
-  },
-  {
-    title: "Contact Us",
-    description: "We are here to help you with any questions you have",
-    icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
-    href: "/contact",
-  },
-  {
-    title: "Status",
-    description: "Check the current status of our services and APIs",
-    icon: <Trees className="size-5 shrink-0 text-orange-500" />,
-    href: "/status",
-  },
-  {
-    title: "Terms of Service",
-    description: "Our terms and conditions for using our services",
-    icon: <Book className="size-5 shrink-0 text-orange-500" />,
-    href: "/terms",
-  },
+    href: "/about-us",
+  }
 ];

@@ -11,9 +11,20 @@ import { useParams } from "next/navigation";
 import { blogPosts } from "@/data/blog-posts";
 
 function SingleBlogPage() {
-
   const { slug } = useParams();
   const blogPost = blogPosts.find((post) => post.slug === slug);
+
+  if (!blogPost) {
+    return (
+      <>
+        <Navbar />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h1>Blog Post Not Found</h1>
+        </div>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
