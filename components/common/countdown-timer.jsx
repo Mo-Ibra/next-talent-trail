@@ -35,7 +35,7 @@ export function CountdownTimer({ targetDate }) {
       {Object.entries(timeLeft).map(([key, value]) => (
         <div key={key} className="flex flex-col items-center">
           <div className="bg-black/30 backdrop-blur-sm rounded-full w-24 h-24 flex items-center justify-center mb-2">
-            <span className="text-4xl font-bold text-white">-{value}</span>
+            <span className="text-4xl font-bold text-white">{value}</span>
           </div>
           <span className="text-white/80 uppercase text-sm tracking-wider">
             {key}

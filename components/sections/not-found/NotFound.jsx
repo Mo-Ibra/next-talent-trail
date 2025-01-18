@@ -1,15 +1,8 @@
-import { CountdownTimer } from "@/components/common/countdown-timer";
 import { Button } from "@/components/ui/button";
 import { HomeIcon } from "lucide-react";
 import Link from "next/link";
 
-export default function ComingSoon() {
-
-  // Set target date to 5 days from now
-  const targetDate = new Date();
-
-  targetDate.setDate(targetDate.getDate() + 5);
-
+function NotFound() {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       
@@ -17,24 +10,21 @@ export default function ComingSoon() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("/images/soon/4.jpg")',
+          backgroundImage: 'url("/images/not-found/1.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          We Are Coming Soon...
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+          Ops! Page Not Found
         </h1>
-        <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-          We are currently working on our new website and will be launching in
-          the next few months.
+        <p className="text-lg text-white/80 max-w-2xl mx-auto my-4">
+          Please make sure the URL is correct and try again.
         </p>
 
-        <CountdownTimer targetDate={targetDate} />
-
-        <Link href="/" className="inline-flex items-center justify-center mt-8">
+        <Link href="/" className="inline-flex items-center justify-center">
           <Button variant="outline">
             Return Home
             <HomeIcon className="ml-2 size-4" />
@@ -44,3 +34,5 @@ export default function ComingSoon() {
     </div>
   );
 }
+
+export default NotFound;
