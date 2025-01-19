@@ -12,7 +12,7 @@ const ForgetPassword = () => {
           <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow">
             <div className="mb-6 flex flex-col items-center">
               <Image
-                src="https://shadcnblocks.com/images/block/block-1.svg"
+                src="/logo.svg"
                 alt="logo"
                 width={48}
                 height={48}
@@ -23,7 +23,7 @@ const ForgetPassword = () => {
             <div>
               <div className="grid gap-4">
                 <Input type="email" placeholder="Enter your email" required />
-                <Button type="submit" className="mt-2 w-full">
+                <Button type="submit" className="mt-2 w-full bg-orange-600 hover:bg-orange-700">
                   Send a code.
                 </Button>
               </div>
