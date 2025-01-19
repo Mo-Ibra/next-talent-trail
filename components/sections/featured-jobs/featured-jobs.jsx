@@ -1,10 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-import { jobs } from "@/data/jobs";
 import { BasicJobCard } from "@/components/common/job-cards";
 
-function FeaturedJobs() {
+function FeaturedJobs({ jobs }) {
   return (
     <section className="py-16 px-4 md:px-6 relative">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">

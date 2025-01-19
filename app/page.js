@@ -14,9 +14,8 @@ import { categories } from "@/data/categories";
 import { jobs } from "@/data/jobs";
 
 function Home() {
-
+  
   const renderedCategories = categories.slice(0, 8);
-
   const renderedJobs = jobs.slice(0, 6);
 
   return (
@@ -25,13 +24,12 @@ function Home() {
       <Hero1 />
       <Categories1 categories={renderedCategories} />
       <PopularJobs jobs={renderedJobs} />
-      <FeaturedJobs />
+      <FeaturedJobs jobs={renderedJobs} />
       <TopRecruiters />
       <Testimonials1 />
       <Logos />
       <Subscribe />
       <Blog />
-      {/* Get App */}
       <Footer />
     </>
   );

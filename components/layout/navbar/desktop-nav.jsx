@@ -121,7 +121,7 @@ const DesktopNav = () => {
             )}
             href="/contact-us"
           >
-            Contact Us
+            Contact
           </Link>
         </div>
       </div>

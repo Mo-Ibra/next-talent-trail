@@ -139,7 +139,7 @@ const MobileNav = () => {
                 href="/contact-us"
                 className="font-semibold hover:text-orange-500"
               >
-                Contact Us
+                Contact
               </Link>
             </div>
           </SheetContent>

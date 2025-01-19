@@ -14,48 +14,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const data = [
-  {
-    id: "item-1",
-    title: "15 Tips for Better Product Photography Right Now",
-    summary:
-      "A metus platea vel tincidunt sed, blandit. Sed et mauris pharetra, tincidunt sem at, elementum nisl. Sed et mauris pharetra, tincidunt sem at, elementum nisl.",
-    href: "#",
-    image: "/images/blog/news-1.jpg",
-  },
-  {
-    id: "item-2",
-    title: "Job Interview Secrets: How to Land Your Dream Job",
-    summary:
-      "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
-    href: "#",
-    image: "/images/blog/news-2.jpg",
-  },
-  {
-    id: "item-3",
-    title: "How to Build a Successful Freelance Business",
-    summary:
-      "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
-    href: "#",
-    image: "/images/blog/news-3.jpg",
-  },
-  {
-    id: "item-4",
-    title: "What You Need to Know About Freelancing",
-    summary:
-      "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
-    href: "#",
-    image: "/images/blog/news-1.jpg",
-  },
-  {
-    id: "item-5",
-    title: "Does Freelancing Make You Money online?",
-    summary:
-      "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
-    href: "#",
-    image: "/images/blog/news-2.jpg",
-  },
-];
+
+import { blogPosts } from "@/data/blog-posts";
 
 const Blog = () => {
   const [carouselApi, setCarouselApi] = useState();
@@ -135,7 +95,7 @@ const Blog = () => {
           }}
         >
           <CarouselContent>
-            {data.map((item) => (
+            {blogPosts.map((item) => (
               <CarouselItem
                 key={item.id}
                 className="pl-[20px] md:max-w-[452px]"
@@ -157,7 +117,7 @@ const Blog = () => {
                   </div>
                   <Link
                     className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl"
-                    href={item.href}
+                    href={`/blog/${item.slug}`}
                   >
                     {item.title}
                   </Link>
@@ -166,7 +126,7 @@ const Blog = () => {
                   </div>
                   <Link
                     className="flex items-center text-sm hover:text-orange-500"
-                    href={item.href}
+                    href={`/blog/${item.slug}`}
                   >
                     Read more{" "}
                     <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1 text-orange-500" />
