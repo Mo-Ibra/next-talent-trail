@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/common/bread-crumb";
 import Navbar from "@/components/layout/navbar/navbar";
 import Blog from "@/components/sections/blog/blog";
-import Footer from "@/components/sections/footer/Footer";
+import Footer from "@/components/layout/footer/Footer";
 import JobListSidebar4 from "@/components/sections/job-list/JobListSidebar4";
 
 import Logos from "@/components/sections/logos/Logos";

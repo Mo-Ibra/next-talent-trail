@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/common/bread-crumb";
 import Navbar from "@/components/layout/navbar/navbar";
 import Blog from "@/components/sections/blog/blog";
 import CompanyProfile from "@/components/sections/company-profile/CompanyProfile";
-import Footer from "@/components/sections/footer/Footer";
+import Footer from "@/components/layout/footer/Footer";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 

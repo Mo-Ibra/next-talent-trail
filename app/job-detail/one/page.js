@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/navbar/navbar";
 import Blog from "@/components/sections/blog/blog";
-import Footer from "@/components/sections/footer/Footer";
+import Footer from "@/components/layout/footer/Footer";
 import JobDetail1 from "@/components/sections/job-detail/job-detail-1";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";

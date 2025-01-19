@@ -36,7 +36,7 @@ export const testimonials = [
     author: {
       name: "Michael Ross",
       handle: "@michjack",
-      image: "/images/avatars/3.png",
+      image: "/images/avatars/1.jpg",
       class: "rotate-2",
     },
     content:
@@ -47,7 +47,7 @@ export const testimonials = [
     author: {
       name: "Mike Bryan",
       handle: "@mike0point7",
-      image: "/images/avatars/2.png",
+      image: "/images/avatars/2.jpg",
       class: "-rotate-1",
     },
     content:
@@ -58,7 +58,7 @@ export const testimonials = [
     author: {
       name: "Sarah Rodriguez",
       handle: "@sararodriguez",
-      image: "/images/avatars/1.png",
+      image: "/images/avatars/3.jpg",
       class: "-rotate-2",
     },
     content:
@@ -69,7 +69,7 @@ export const testimonials = [
     author: {
       name: "Duncan Mitch",
       handle: "@lovingme_",
-      image: "/images/avatars/2.png",
+      image: "/images/avatars/4.jpg",
       class: "-rotate-3",
     },
     content:
@@ -91,7 +91,7 @@ export const testimonials = [
     author: {
       name: "Dante Luzzi",
       handle: "@dante1987",
-      image: "/images/avatars/3.png",
+      image: "/images/avatars/2.png",
       class: "rotate-2",
     },
     content:

@@ -1,10 +1,10 @@
 import Breadcrumb from "@/components/common/bread-crumb";
 import Navbar from "@/components/layout/navbar/navbar";
+import Footer from "@/components/layout/footer/Footer";
 import Blog from "@/components/sections/blog/blog";
 import FAQ1 from "@/components/sections/faq/Faq1";
 import Features1 from "@/components/sections/features/Features1";
 import Features2 from "@/components/sections/features/Features2";
-import Footer from "@/components/sections/footer/Footer";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 

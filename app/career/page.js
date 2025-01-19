@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/navbar/navbar";
 import Blog from "@/components/sections/blog/blog";
 import Career from "@/components/sections/career/career";
 import FAQ1 from "@/components/sections/faq/Faq1";
-import Footer from "@/components/sections/footer/Footer";
+import Footer from "@/components/layout/footer/Footer";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 

@@ -14,7 +14,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-
 import { blogPosts } from "@/data/blog-posts";
 
 const Blog = () => {

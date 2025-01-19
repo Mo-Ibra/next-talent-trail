@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/navbar/navbar";
 import Login from "@/components/sections/auth/login";
-import Footer from "@/components/sections/footer/Footer";
+import Footer from "@/components/layout/footer/Footer";
 
 
 function LoginPage() {
