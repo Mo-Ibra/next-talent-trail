@@ -52,10 +52,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen">
-
+    <div className="min-h-screen relative">
       <GoogleMaps />
-
       <div className="container mx-auto px-4 sm:px-8 lg:px-12 py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="grid place-items-center">
@@ -156,6 +154,10 @@ const ContactForm = () => {
             </CardContent>
           </Card>
         </div>
+      </div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-96 h-96 bg-orange-500/20 opacity-40 -z-10 rounded-full blur-3xl top-96 -left-20"></div>
+        <div className="absolute w-96 h-96 bg-orange-50 opacity rounded-full bottom-10 -right-52 -z-10"></div>
       </div>
     </div>
   );

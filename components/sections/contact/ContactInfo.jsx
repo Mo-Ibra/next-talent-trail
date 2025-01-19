@@ -51,6 +51,7 @@ const ContactInfo = () => {
 
       <div className="absolute top-0 left-0 w-full h-1 bg-orange-500 opacity-10"></div>
       <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 opacity-10"></div>
+
     </section>
   );
 };
