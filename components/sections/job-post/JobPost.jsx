@@ -401,7 +401,7 @@ export default function PostJob() {
               <div
                 key={index}
                 className={`bg-white rounded-lg p-6 shadow-sm border border-orange-300 opacity-15 duration-300 hover:opacity-100 cursor-pointer ${
-                  testimonial.isVisible && "opacity-100"
+                  testimonial.isVisible && "!opacity-100"
                 }`}
               >
                 <blockquote className="text-lg mb-4 text-muted-foreground">
