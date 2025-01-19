@@ -86,12 +86,6 @@ export const subMenuItemsOne = [
     icon: <Zap className="size-5 shrink-0 text-orange-500" />,
     href: "/job-detail/two",
   },
-  {
-    title: "Job Detail Three",
-    description: "Browse job listing and discover our workspace",
-    icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
-    href: "/job-detail/three",
-  }
 ];
 
 // Pages
@@ -113,6 +107,12 @@ export const subMenuItemsTwo = [
     description: "Our mission is to innovate and empower the world",
     icon: <Trees className="size-5 shrink-0 text-orange-500" />,
     href: "/companies",
+  },
+  {
+    title: "Company Detail",
+    description: "Our mission is to innovate and empower the world",
+    icon: <Trees className="size-5 shrink-0 text-orange-500" />,
+    href: "/company-detail",
   },
   {
     title: "Careers",

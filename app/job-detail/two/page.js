@@ -1,9 +1,21 @@
-const Page = () => {
+import Navbar from "@/components/layout/navbar/navbar";
+import Blog from "@/components/sections/blog/blog";
+import Footer from "@/components/sections/footer/Footer";
+import JobDetail2 from "@/components/sections/job-detail/job-detail-2";
+import Logos from "@/components/sections/logos/Logos";
+import Subscribe from "@/components/sections/subscribe/subscribe";
+
+function JobDetailPage() {
   return (
-    <div>
-      <h1>Job Detail 2</h1>
-    </div>
-  )
+    <>
+      <Navbar />
+      <JobDetail2 />
+      <Logos />
+      <Subscribe />
+      <Blog />
+      <Footer />
+    </>
+  );
 }
 
-export default Page;
+export default JobDetailPage;

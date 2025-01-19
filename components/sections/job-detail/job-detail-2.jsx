@@ -10,7 +10,7 @@ import {
   MapPin,
   Share2Icon,
   TimerIcon,
-  Table2Icon
+  Table2Icon,
 } from "lucide-react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 
@@ -41,9 +41,9 @@ const relatedJobs = [
   },
 ];
 
-function JobDetail1() {
+function JobDetail2() {
   return (
-    <div className="min-h-screen relative py-8">
+    <div className="min-h-screen relative bg-orange-50 py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
         <Link
@@ -55,6 +55,81 @@ function JobDetail1() {
         </Link>
 
         <div className="grid lg:grid-cols-3 gap-8">
+
+          {/* Sidebar */}
+          <div>
+            <div className="lg:col-span-1 lg:top-5 lg:sticky">
+              {/* Company Publisher */}
+              <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <Avatar className="h-12 w-12">
+                    <AvatarImage
+                      src="/images/logos/1-5.png"
+                      alt="Medium Inc."
+                    />
+                  </Avatar>
+                  <div>
+                    <h2 className="font-semibold">Medium Inc.</h2>
+                    <div className="text-sm text-gray-500">
+                      Posted on 24 August, 2024
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <Table2Icon className="h-4 w-4" />
+                    <span>Fulltime</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <MapPin className="h-4 w-4" />
+                    <span>London, UK / Remote Friendly</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <Calendar className="h-4 w-4" />
+                    <span>$75K - $100K</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <Share2Icon className="h-4 w-4" />
+                    <span>3+ Years of Experience</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <TimerIcon className="h-4 w-4" />
+                    <span>5th Jan, 2024</span>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <Button
+                    className="w-full bg-orange-600 hover:bg-orange-700"
+                    size="lg"
+                  >
+                    Apply Now →
+                  </Button>
+                  <Button variant="outline" className="w-full" size="lg">
+                    Visit Website
+                  </Button>
+                </div>
+              </div>
+
+              {/* Newsletter */}
+              <div className="bg-white rounded-lg shadow-sm border p-6">
+                <div className="text-center mb-6">
+                  <h3 className="font-medium mb-2">Land your dream job</h3>
+                  <p className="text-sm text-gray-500">
+                    Get a weekly email with the latest startup jobs.
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <Input placeholder="Your email" type="email" />
+                  <Button className="bg-orange-600 hover:bg-orange-700">
+                    Join Newsletter
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Main Content */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
@@ -200,80 +275,6 @@ function JobDetail1() {
               </div>
             </div>
           </div>
-
-          {/* Sidebar */}
-          <div>
-            <div className="lg:col-span-1 lg:top-5 lg:sticky">
-              {/* Company Publisher */}
-              <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
-                <div className="flex items-center gap-4 mb-6">
-                  <Avatar className="h-12 w-12">
-                    <AvatarImage
-                      src="/images/logos/1-5.png"
-                      alt="Medium Inc."
-                    />
-                  </Avatar>
-                  <div>
-                    <h2 className="font-semibold">Medium Inc.</h2>
-                    <div className="text-sm text-gray-500">
-                      Posted on 24 August, 2024
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Table2Icon className="h-4 w-4" />
-                    <span>Fulltime</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <MapPin className="h-4 w-4" />
-                    <span>London, UK / Remote Friendly</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Calendar className="h-4 w-4" />
-                    <span>$75K - $100K</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Share2Icon className="h-4 w-4" />
-                    <span>3+ Years of Experience</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <TimerIcon className="h-4 w-4" />
-                    <span>5th Jan, 2024</span>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <Button
-                    className="w-full bg-orange-600 hover:bg-orange-700"
-                    size="lg"
-                  >
-                    Apply Now →
-                  </Button>
-                  <Button variant="outline" className="w-full" size="lg">
-                    Visit Website
-                  </Button>
-                </div>
-              </div>
-
-              {/* Newsletter */}
-              <div className="bg-white rounded-lg shadow-sm border p-6">
-                <div className="text-center mb-6">
-                  <h3 className="font-medium mb-2">Land your dream job</h3>
-                  <p className="text-sm text-gray-500">
-                    Get a weekly email with the latest startup jobs.
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <Input placeholder="Your email" type="email" />
-                  <Button className="bg-orange-600 hover:bg-orange-700">
-                    Join Newsletter
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -284,4 +285,4 @@ function JobDetail1() {
   );
 }
 
-export default JobDetail1;
+export default JobDetail2;
