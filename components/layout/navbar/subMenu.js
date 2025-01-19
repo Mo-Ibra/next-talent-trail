@@ -78,7 +78,7 @@ export const subMenuItemsOne = [
     title: "Job Detail",
     description: "Browse job listing and discover our workspace",
     icon: <Trees className="size-5 shrink-0 text-orange-500" />,
-    href: "/job-detail",
+    href: "/job-detail/one",
   },
   {
     title: "Job Detail Two",
