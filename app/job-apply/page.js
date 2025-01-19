@@ -1,9 +1,11 @@
-const Page = () => {
+import JobApply from "@/components/sections/job-apply/job-apply";
+
+function JobApplyPage() {
   return (
-    <div>
-      <h1>Job Apply</h1>
-    </div>
-  )
+    <>
+      <JobApply />
+    </>
+  );
 }
 
-export default Page;
+export default JobApplyPage;

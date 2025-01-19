@@ -42,14 +42,14 @@ const testimonials = [
   },
 ];
 
-export default function PostJob() {
+function JobApply() {
   const [formData, setFormData] = useState({
     companyName: "",
     contactEmail: "",
     positionName: "",
     role: "",
     commitment: "",
-    companyLogo: "",
+    candidateCV: "",
     jobDescription: "",
     jobSalary: "",
     jobType: "",
@@ -77,7 +77,7 @@ export default function PostJob() {
   const handleFileChange = (e) => {
     const file = e.target.files?.[0];
     if (file) {
-      setFormData((prev) => ({ ...prev, companyLogo: file.name }));
+      setFormData((prev) => ({ ...prev, candidateCV: file.name }));
     }
   };
 
@@ -117,7 +117,6 @@ export default function PostJob() {
   };
 
   const handleSubmit = (e) => {
-
     e.preventDefault();
 
     if (validateForm()) {
@@ -132,68 +131,67 @@ export default function PostJob() {
       <div className="p-6 md:p-8 lg:p-12 overflow-auto">
         <div className="max-w-md mx-auto">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold mb-4">Post a job on JobBoard</h1>
+            <h1 className="text-3xl font-bold mb-4">Apply for a job</h1>
             <p className="text-muted-foreground">
-              Find the best talent from around the world on the most exclusive
-              job board on the internet.
+              Fill out the form below to apply for a job at our company.
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Company Details */}
             <div className="space-y-6">
-              <h2 className="text-xl font-semibold">1. Your company</h2>
+              <h2 className="text-xl font-semibold">1. Your Information</h2>
 
               <div>
                 <label
-                  htmlFor="companyName"
+                  htmlFor="candidateName"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Company Name <span className="text-red-500">*</span>
+                  Your Name <span className="text-orange-500">*</span>
                 </label>
                 <Input
-                  id="companyName"
-                  name="companyName"
+                  id="candidateName"
+                  name="candidateName"
                   placeholder="E.g., Acme Inc."
-                  value={formData.companyName}
+                  value={formData.candidateName}
                   onChange={handleInputChange}
-                  className={errors.companyName ? "border-red-500" : ""}
+                  className={errors.candidateName ? "border-orange-500" : ""}
                 />
-                {errors.companyName && (
-                  <p className="mt-1 text-sm text-red-500">
-                    {errors.companyName}
+                {errors.candidateName && (
+                  <p className="mt-1 text-sm text-orange-500">
+                    {errors.candidateName}
                   </p>
                 )}
               </div>
 
               <div>
                 <label
-                  htmlFor="contactEmail"
+                  htmlFor="candidateEmail"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Contact Email <span className="text-red-500">*</span>
+                  Your Email <span className="text-orange-500">*</span>
                 </label>
                 <Input
-                  id="contactEmail"
-                  name="contactEmail"
+                  id="candidateEmail"
+                  name="candidateEmail"
                   type="email"
-                  value={formData.contactEmail}
+                  value={formData.candidateEmail}
                   onChange={handleInputChange}
-                  className={errors.contactEmail ? "border-red-500" : ""}
+                  className={errors.candidateEmail ? "border-orange-500" : ""}
                 />
-                {errors.contactEmail && (
-                  <p className="mt-1 text-sm text-red-500">
-                    {errors.contactEmail}
+                {errors.candidateEmail && (
+                  <p className="mt-1 text-sm text-orange-500">
+                    {errors.candidateEmail}
                   </p>
                 )}
               </div>
 
               <div>
                 <label
-                  htmlFor="companyLogo"
-                  className="block text-sm font-medium text-gray-700"
+                  htmlFor="candidateCV"
+                  className="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Company Logo (optional)
+                  Your CV <span className="text-orange-500">*</span>
                 </label>
                 <div className="flex items-center gap-4">
                   <Button
@@ -206,11 +204,11 @@ export default function PostJob() {
                     Choose File
                   </Button>
                   <span className="text-sm text-muted-foreground">
-                    {formData.companyLogo || "No file chosen"}
+                    {formData.candidateCV || "No file chosen"}
                   </span>
                   <Input
                     id="logo-upload"
-                    name="companyLogo"
+                    name="candidateCV"
                     type="file"
                     className="hidden"
                     accept="image/*"
@@ -226,168 +224,124 @@ export default function PostJob() {
 
               <div>
                 <label
-                  htmlFor="positionName"
+                  htmlFor="location"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Position Name <span className="text-red-500">*</span>
-                </label>
-                <Input
-                  id="positionName"
-                  name="positionName"
-                  placeholder="E.g., Senior Software Engineer"
-                  value={formData.positionName}
-                  onChange={handleInputChange}
-                  className={errors.positionName ? "border-red-500" : ""}
-                />
-                {errors.positionName && (
-                  <p className="mt-1 text-sm text-red-500">
-                    {errors.positionName}
-                  </p>
-                )}
-              </div>
-
-              <div>
-                <label
-                  htmlFor="role"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Role <span className="text-red-500">*</span>
-                </label>
-                <Select
-                  onValueChange={(value) => handleSelectChange("role", value)}
-                >
-                  <SelectTrigger
-                    className={errors.role ? "border-red-500" : ""}
-                  >
-                    <SelectValue placeholder="Select a role" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="programming">Programming</SelectItem>
-                    <SelectItem value="design">Design</SelectItem>
-                    <SelectItem value="marketing">Marketing</SelectItem>
-                    <SelectItem value="sales">Sales</SelectItem>
-                  </SelectContent>
-                </Select>
-                {errors.role && (
-                  <p className="mt-1 text-sm text-red-500">{errors.role}</p>
-                )}
-              </div>
-
-              <div>
-                <label
-                  htmlFor="commitment"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Commitment <span className="text-red-500">*</span>
+                  Your Location <span className="text-orange-500">*</span>
                 </label>
                 <Select
                   onValueChange={(value) =>
-                    handleSelectChange("commitment", value)
+                    handleSelectChange("location", value)
                   }
                 >
                   <SelectTrigger
-                    className={errors.commitment ? "border-red-500" : ""}
+                    className={errors.location ? "border-orange-500" : ""}
                   >
-                    <SelectValue placeholder="Select commitment type" />
+                    <SelectValue placeholder="Select a location" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="full-time">Full-time</SelectItem>
-                    <SelectItem value="part-time">Part-time</SelectItem>
-                    <SelectItem value="contract">Contract</SelectItem>
-                    <SelectItem value="internship">Internship</SelectItem>
+                    <SelectItem value="florida">Florida</SelectItem>
+                    <SelectItem value="newyork">New York</SelectItem>
+                    <SelectItem value="california">California</SelectItem>
+                    <SelectItem value="northcarolina">
+                      North Carolina
+                    </SelectItem>
                   </SelectContent>
                 </Select>
-                {errors.commitment && (
-                  <p className="mt-1 text-sm text-red-500">
-                    {errors.commitment}
+                {errors.location && (
+                  <p className="mt-1 text-sm text-orange-500">{errors.location}</p>
+                )}
+              </div>
+
+              <div>
+                <label
+                  htmlFor="motivationLetter"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Motivation letter <span className="text-orange-500">*</span>
+                </label>
+                <Textarea
+                  id="motivationLetter"
+                  name="motivationLetter"
+                  type="text"
+                  value={formData.motivationLetter}
+                  onChange={handleInputChange}
+                  className={errors.motivationLetter ? "border-orange-500" : ""}
+                />
+                {errors.motivationLetter && (
+                  <p className="mt-1 text-sm text-orange-500">
+                    {errors.motivationLetter}
                   </p>
                 )}
               </div>
-            </div>
 
-            <div>
-              <label
-                htmlFor="jobDescription"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Job Description <span className="text-red-500">*</span>
-              </label>
-              <Textarea
-                id="jobDescription"
-                name="jobDescription"
-                type="text"
-                value={formData.jobDescription}
-                onChange={handleInputChange}
-                className={errors.jobDescription ? "border-red-500" : ""}
-              />
-              {errors.jobDescription && (
-                <p className="mt-1 text-sm text-red-500">
-                  {errors.jobDescription}
-                </p>
-              )}
-            </div>
-
-            <div>
-              <label
-                htmlFor="jobSalary"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Job Salary <span className="text-red-500">*</span>
-              </label>
-              <Input
-                id="jobSalary"
-                name="jobSalary"
-                type="text"
-                value={formData.jobSalary}
-                onChange={handleInputChange}
-                className={errors.jobSalary ? "border-red-500" : ""}
-              />
-              {errors.jobSalary && (
-                <p className="mt-1 text-sm text-red-500">{errors.jobSalary}</p>
-              )}
-            </div>
-
-            <div>
-              <label
-                htmlFor="jobType"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Job Type <span className="text-red-500">*</span>
-              </label>
-              <Select
-                onValueChange={(value) => handleSelectChange("jobType", value)}
-              >
-                <SelectTrigger
-                  className={errors.jobType ? "border-red-500" : ""}
+              <div>
+                <label
+                  htmlFor="expectedSalary"
+                  className="block text-sm font-medium text-gray-700"
                 >
-                  <SelectValue placeholder="Select job type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="full-time">On Site</SelectItem>
-                  <SelectItem value="part-time">Remote</SelectItem>
-                  <SelectItem value="contract">Hybrid</SelectItem>
-                </SelectContent>
-              </Select>
-              {errors.jobType && (
-                <p className="mt-1 text-sm text-red-500">{errors.jobType}</p>
-              )}
-            </div>
+                  Expected Salary <span className="text-orange-500">*</span>
+                </label>
+                <Input
+                  id="expectedSalary"
+                  name="expectedSalary"
+                  type="text"
+                  value={formData.expectedSalary}
+                  onChange={handleInputChange}
+                  className={errors.expectedSalary ? "border-orange-500" : ""}
+                />
+                {errors.expectedSalary && (
+                  <p className="mt-1 text-sm text-orange-500">
+                    {errors.expectedSalary}
+                  </p>
+                )}
+              </div>
 
-            <div className="flex space-x-2">
-              <Button
-                type="submit"
-                size="lg"
-                className="bg-orange-600 hover:bg-orange-700"
-              >
-                Publish Your Job
-                <FireExtinguisherIcon className="ml-2 size-4" />
-              </Button>
-              <Link href="/">
-                <Button size="lg" variant="outline">
-                  Back Home
-                  <HomeIcon className="ml-2 size-4" />
+              <div>
+                <label
+                  htmlFor="jobType"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Your Preferorange Job Type{" "}
+                  <span className="text-orange-500">*</span>
+                </label>
+                <Select
+                  onValueChange={(value) =>
+                    handleSelectChange("jobType", value)
+                  }
+                >
+                  <SelectTrigger
+                    className={errors.jobType ? "border-orange-500" : ""}
+                  >
+                    <SelectValue placeholder="Select job type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="full-time">On Site</SelectItem>
+                    <SelectItem value="part-time">Remote</SelectItem>
+                    <SelectItem value="contract">Hybrid</SelectItem>
+                  </SelectContent>
+                </Select>
+                {errors.jobType && (
+                  <p className="mt-1 text-sm text-orange-500">{errors.jobType}</p>
+                )}
+              </div>
+
+              <div className="flex space-x-2">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="bg-orange-600 hover:bg-orange-700"
+                >
+                  Apply for Job
+                  <FireExtinguisherIcon className="ml-2 size-4" />
                 </Button>
-              </Link>
+                <Link href="/">
+                  <Button size="lg" variant="outline">
+                    Back Home
+                    <HomeIcon className="ml-2 size-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </form>
         </div>
@@ -429,3 +383,5 @@ export default function PostJob() {
     </div>
   );
 }
+
+export default JobApply;
