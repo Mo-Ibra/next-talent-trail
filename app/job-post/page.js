@@ -1,9 +1,11 @@
-const Page = () => {
+import JobPost from "@/components/sections/job-post/JobPost";
+
+function JobPostPage() {
   return (
-    <div>
-      <h1>Job Post</h1>
-    </div>
-  )
+    <>
+      <JobPost />
+    </>
+  );
 }
 
-export default Page;
+export default JobPostPage;
