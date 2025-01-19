@@ -25,14 +25,14 @@ const MobileNav = () => {
   return (
     <div className="block lg:hidden">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <img
-            src="https://shadcnblocks.com/images/block/block-1.svg"
+            src="/logo.svg"
             className="w-8"
             alt="logo"
           />
           <p className="text-xl font-bold cursor-pointer">
-            Talent{" "}
+            Lent{" "}
             <span className="text-orange-500 font-bold uppercase">Trail</span>
           </p>
         </div>

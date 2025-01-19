@@ -13,8 +13,8 @@ const Register = () => {
           <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow">
             <div className="mb-6 flex flex-col items-center">
               <img
-                src="https://shadcnblocks.com/images/block/block-1.svg"
-                alt="logo"
+                src="/logo.svg"
+                alt="Website Logo"
                 className="mb-7 h-10 w-auto"
               />
               <p className="mb-2 text-2xl font-bold">Start your free trial</p>
@@ -32,11 +32,8 @@ const Register = () => {
                     placeholder="Enter your password"
                     required
                   />
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Must be at least 8 characters.
-                  </p>
                 </div>
-                <Button type="submit" className="mt-2 w-full">
+                <Button type="submit" className="mt-2 w-full bg-orange-600 hover:bg-orange-700">
                   Create an account
                 </Button>
                 <Button variant="outline" className="w-full">

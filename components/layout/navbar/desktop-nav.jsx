@@ -16,16 +16,16 @@ const DesktopNav = () => {
   return (
     <nav className="hidden justify-between lg:flex">
       <div className="flex items-center gap-6">
-        <Link className="flex items-center gap-2" href="/">
+        <Link className="flex items-center" href="/">
           <Image
-            src="https://shadcnblocks.com/images/block/block-1.svg"
+            src="/logo.svg"
             alt="logo"
             width={32}
             height={32}
           />
           <p className="text-xl font-bold cursor-pointer">
-            Talent{" "}
-            <span className="text-orange-500 font-bold uppercase">Trail</span>
+            Lent{" "}
+            <span className="text-orange-500 font-bold">Trail</span>
           </p>
         </Link>
         <div className="flex items-center">

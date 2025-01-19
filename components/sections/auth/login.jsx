@@ -14,8 +14,8 @@ const Login = () => {
           <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow">
             <div className="mb-6 flex flex-col items-center">
               <Image
-                src="https://shadcnblocks.com/images/block/block-1.svg"
-                alt="logo"
+                src="/logo.svg"
+                alt="Website Logo"
                 width={48}
                 height={48}
                 className="mb-7 h-10 w-auto"
@@ -32,7 +32,7 @@ const Login = () => {
                     required
                   />
                 </div>
-                <Button type="submit" className="mt-2 w-full">
+                <Button type="submit" className="mt-2 w-full bg-orange-600 hover:bg-orange-700">
                   Login to your account
                 </Button>
                 <Button variant="outline" className="w-full">

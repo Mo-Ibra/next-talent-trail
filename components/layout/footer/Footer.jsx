@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-10 text-center lg:flex-row lg:text-left">
           <div className="flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start">
             <div>
-              <span className="flex items-center justify-center gap-4 lg:justify-start">
+              <span className="flex items-center justify-center lg:justify-start">
                 <img
-                  src="https://shadcnblocks.com/images/block/block-1.svg"
+                  src="/logo.svg"
                   alt="logo"
                   className="h-11"
                 />
-                <p className="text-3xl font-semibold">Talent Trail</p>
+                <p className="text-3xl font-semibold">Lent Trail</p>
               </span>
               <p className="mt-6 text-sm text-muted-foreground">
                 A collection of 100+ responsive HTML templates for your startup
