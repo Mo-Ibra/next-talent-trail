@@ -5,7 +5,7 @@ import Footer from "@/components/sections/footer/Footer";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
-function ContactUs() {
+function ContactUsPage() {
   return (
     <>
       <Navbar />
@@ -18,4 +18,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default ContactUsPage;

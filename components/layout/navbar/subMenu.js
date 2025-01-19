@@ -109,10 +109,10 @@ export const subMenuItemsTwo = [
     href: "/companies",
   },
   {
-    title: "Company Detail",
+    title: "Company Profile",
     description: "Our mission is to innovate and empower the world",
     icon: <Trees className="size-5 shrink-0 text-orange-500" />,
-    href: "/company-detail",
+    href: "/company-profile",
   },
   {
     title: "Careers",
