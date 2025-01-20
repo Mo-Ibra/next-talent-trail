@@ -115,6 +115,12 @@ export const subMenuItemsTwo = [
     href: "/company-profile",
   },
   {
+    title: "Candidates",
+    description: "Many desktop publishing now use and a search for job",
+    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    href: "/candidates",
+  },
+  {
     title: "Careers",
     description: "What about working with us? We would love to hear from you",
     icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
