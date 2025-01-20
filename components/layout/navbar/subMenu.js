@@ -121,6 +121,12 @@ export const subMenuItemsTwo = [
     href: "/candidates",
   },
   {
+    title: "Candidate Profile",
+    description: "Many desktop publishing now use and a search for job",
+    icon: <Book className="size 5 shrink-0 text-orange-500" />,
+    href: "/candidates/profile",
+  },
+  {
     title: "Careers",
     description: "What about working with us? We would love to hear from you",
     icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
@@ -137,7 +143,7 @@ export const subMenuItemsTwo = [
     description: "Here you can find everything you need to know",
     icon: <Zap className="size-5 shrink-0 text-orange-500" />,
     href: "/about-us",
-  }
+  },
 ];
 
 // Utils
@@ -177,5 +183,5 @@ export const subMenuItemsThree = [
     description: "This page is for not found",
     icon: <Zap className="size-5 shrink-0 text-orange-500" />,
     href: "/not-found",
-  }
+  },
 ];
