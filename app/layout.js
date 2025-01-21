@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/context/ThemeContext";
 import "./globals.css";
 
 export const metadata = {
@@ -7,9 +8,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <link rel="icon" href="/favicon.svg" sizes="any" />
-      <body>{children}</body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <link rel="icon" href="/favicon.svg" sizes="any" />
+        <body>{children}</body>
+      </html>
+    </ThemeProvider>
   );
 }

@@ -9,7 +9,9 @@ import TopRecruiters from "@/components/sections/top-recruiters/top-recruiters";
 import Logos from "@/components/sections/logos/Logos";
 import Blog from "@/components/sections/blog/blog";
 import Subscribe from "@/components/sections/subscribe/subscribe";
-import ScrollToTopButton from "@/components/common/scrollToTopButton";
+
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
 
 import { categories } from "@/data/categories";
 import { jobs } from "@/data/jobs";
@@ -33,6 +35,7 @@ function Home() {
       <Blog />
       <Footer />
       <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }
