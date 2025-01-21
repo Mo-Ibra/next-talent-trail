@@ -9,7 +9,7 @@ function Breadcrumb({
   background,
 }) {
   return (
-    <div className="py-52 relative w-full h-[200px] md:h-[240px] flex items-center justify-center overflow-hidden">
+    <div className="pt-56 pb-40 relative w-full h-[200px] md:h-[240px] flex items-center justify-center overflow-hidden">
 
       {/* Background Image with Overlay */}
       <div

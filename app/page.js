@@ -9,6 +9,7 @@ import TopRecruiters from "@/components/sections/top-recruiters/top-recruiters";
 import Logos from "@/components/sections/logos/Logos";
 import Blog from "@/components/sections/blog/blog";
 import Subscribe from "@/components/sections/subscribe/subscribe";
+import ScrollToTopButton from "@/components/common/scrollToTopButton";
 
 import { categories } from "@/data/categories";
 import { jobs } from "@/data/jobs";
@@ -31,6 +32,7 @@ function Home() {
       <Subscribe />
       <Blog />
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
