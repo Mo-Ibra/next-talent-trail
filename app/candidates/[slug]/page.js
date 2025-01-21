@@ -15,7 +15,15 @@ function CandidateProfilePage() {
   const { slug } = useParams();
   const candidate = candidates.find((candidate) => candidate.slug === slug);
 
-  console.log(candidate);
+  if (!candidate) {
+    return (
+      <>
+        <Navbar />
+        <h1>Candidate Not Found</h1>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>

@@ -124,7 +124,7 @@ export const subMenuItemsTwo = [
     title: "Candidate Profile",
     description: "Many desktop publishing now use and a search for job",
     icon: <Book className="size 5 shrink-0 text-orange-500" />,
-    href: "/candidates/profile",
+    href: "/candidates/john-doe",
   },
   {
     title: "Careers",

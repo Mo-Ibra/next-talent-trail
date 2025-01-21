@@ -30,8 +30,6 @@ const CandidateProfile = ({ candidate }) => {
     console.log(contactForm);
   };
 
-  console.log(candidate);
-
   return (
     <div className="min-h-screen bg-orange-50 pb-16">
       {/* Header Image */}
