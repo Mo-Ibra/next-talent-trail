@@ -28,7 +28,7 @@ function Testimonials1() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`rounded-xl pt-5 bg-card text-card-foreground border-0 shadow-lg dark:bg-darkgray ${testimonial.author.class}`}
+              className="rounded-xl pt-5 bg-card text-card-foreground border-0 shadow-lg dark:bg-darkgray"
             >
               <div className="p-6 pt-0">
                 <div className="flex items-start justify-between">
