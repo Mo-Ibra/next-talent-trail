@@ -58,14 +58,14 @@ function JobDetail1() {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-lg shadow-sm p-6 mb-8 border">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-8 border">
               <h1 className="text-2xl font-bold mb-6">
                 Engineering Manager Developer Experience
               </h1>
 
               <section className="mb-8">
                 <h2 className="text-xl font-semibold mb-4">The Role</h2>
-                <div className="space-y-4 text-gray-600">
+                <div className="space-y-4 text-gray-600 dark:text-gray-400">
                   <p>
                     In the world of AI, behavioural predictions are leading the
                     charge to better machine learning.
@@ -95,7 +95,7 @@ function JobDetail1() {
 
               <section className="mb-8">
                 <h2 className="text-xl font-semibold mb-4">About You</h2>
-                <div className="space-y-4 text-gray-600">
+                <div className="space-y-4 text-gray-600 dark:text-gray-400">
                   <p>
                     You love building great software. Your work could be
                     supporting new feature development, migrating existing
@@ -128,7 +128,7 @@ function JobDetail1() {
                 <h2 className="text-xl font-semibold mb-4">
                   Things You Might Do
                 </h2>
-                <div className="space-y-4 text-gray-600">
+                <div className="space-y-4 text-gray-600 dark:text-gray-400">
                   <p>
                     We are a fast-growing, and remote-first company, so you'll
                     likely get experience on many different projects across the
@@ -176,7 +176,7 @@ function JobDetail1() {
             </div>
 
             {/* Related Jobs */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border p-6">
               <h2 className="text-xl font-semibold mb-6">Related Jobs</h2>
               <div className="space-y-6">
                 {relatedJobs.map((job, index) => (
@@ -190,12 +190,12 @@ function JobDetail1() {
                       </Avatar>
                       <div>
                         <h3 className="font-medium">{job.title}</h3>
-                        <div className="text-sm text-gray-500">
+                        <div className="text-sm text-gray-500 dark:text-gray-400">
                           {job.salary} • {job.location}
                         </div>
                       </div>
                     </div>
-                    <div className="text-sm text-gray-500">{job.timeAgo}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">{job.timeAgo}</div>
                   </div>
                 ))}
               </div>
@@ -206,7 +206,7 @@ function JobDetail1() {
           <div>
             <div className="lg:col-span-1 lg:top-20 lg:sticky">
               {/* Company Publisher */}
-              <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border p-6 mb-6">
                 <div className="flex items-center gap-4 mb-6">
                   <Avatar className="h-12 w-12">
                     <AvatarImage
@@ -259,7 +259,7 @@ function JobDetail1() {
               </div>
 
               {/* Newsletter */}
-              <div className="bg-white rounded-lg shadow-sm border p-6">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border p-6">
                 <div className="text-center mb-6">
                   <h3 className="font-medium mb-2">Land your dream job</h3>
                   <p className="text-sm text-gray-500">
@@ -267,7 +267,7 @@ function JobDetail1() {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <Input placeholder="Your email" type="email" />
+                  <Input placeholder="Your email" type="email" className="dark:border-gray-400" />
                   <Button className="bg-orange-600 hover:bg-orange-700">
                     Join Newsletter
                   </Button>
@@ -279,7 +279,7 @@ function JobDetail1() {
       </div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-96 h-96 bg-orange-500/20 opacity-20 -z-10 rounded-full blur-3xl -top-10 -right-20"></div>
-        <div className="absolute w-96 h-96 bg-orange-50 opacity rounded-full bottom-10 -right-52 -z-10"></div>
+        <div className="absolute w-96 h-96 bg-orange-50 dark:bg-orange-500/10 opacity rounded-full bottom-10 -right-52 -z-10"></div>
       </div>
     </div>
   );

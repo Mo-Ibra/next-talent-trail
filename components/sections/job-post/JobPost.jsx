@@ -394,13 +394,13 @@ export default function PostJob() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="hidden lg:block bg-gradient-to-br from-blue-50 to-purple-50 fixed top-0 right-0 w-1/2 h-full">
+      <div className="hidden lg:block bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 fixed top-0 right-0 w-1/2 h-full">
         <div className="absolute inset-0 p-12 overflow-auto grid justify-center items-center">
           <div className="space-y-8 max-w-[34rem]">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-lg p-6 shadow-sm border border-orange-300 opacity-15 duration-300 hover:opacity-100 cursor-pointer ${
+                className={`bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-orange-300 opacity-15 duration-300 hover:opacity-100 cursor-pointer ${
                   testimonial.isVisible && "!opacity-100"
                 }`}
               >

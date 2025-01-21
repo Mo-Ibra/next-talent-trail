@@ -26,7 +26,7 @@ const contactInfo = [
 
 const ContactInfo = () => {
   return (
-    <section className="py-16 px-4 md:px-6 bg-orange-50 relative">
+    <section className="py-16 px-4 md:px-6 bg-orange-50 dark:bg-gray-900 relative">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {contactInfo.map((item, index) => (

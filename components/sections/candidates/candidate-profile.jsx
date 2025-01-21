@@ -31,7 +31,7 @@ const CandidateProfile = ({ candidate }) => {
   };
 
   return (
-    <div className="min-h-screen bg-orange-50 pb-16">
+    <div className="min-h-screen bg-orange-50 dark:bg-gray-900 pb-16">
       {/* Header Image */}
       <div className="relative h-[400px] w-full">
         <Image
@@ -66,14 +66,14 @@ const CandidateProfile = ({ candidate }) => {
                 </div>
 
                 <div className="space-y-4 mb-8">
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-400">
                     Obviously I'm Web Developer. Web Developer with over 3 years
                     of experience. Experienced with all stages of the
                     development cycle for dynamic web projects. The as opposed
                     to using 'Content here, content here', making it look like
                     readable English.
                   </p>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-400">
                     Data Structures and Algorithms are the heart of programming.
                     initally most of the developers do not realize its
                     importance but when you will start your career in software
@@ -126,7 +126,7 @@ const CandidateProfile = ({ candidate }) => {
                             <p className="text-sm text-muted-foreground mb-2">
                               {exp.period}
                             </p>
-                            <p className="text-gray-600">{exp.description}</p>
+                            <p className="text-gray-600 dark:text-gray-400">{exp.description}</p>
                           </div>
                         </div>
                       ))}

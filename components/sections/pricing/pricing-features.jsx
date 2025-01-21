@@ -114,7 +114,7 @@ const featureGroups = [
 
 function PricingFeatures() {
   return (
-    <section className="py-16 px-4 md:px-6 bg-orange-50">
+    <section className="py-16 px-4 md:px-6 bg-orange-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="w-full overflow-x-auto">
           <table className="w-full">
@@ -130,7 +130,7 @@ function PricingFeatures() {
                       <Button
                         className={`w-full ${
                           plan === "Business"
-                            ? "bg-white text-slate-900 hover:bg-slate-100"
+                            ? "bg-white text-slate-900 hover:bg-slate-200 dark:bg-gray-900 dark:text-gray-400 dark:hover:bg-orange-700 dark:hover:text-white border dark:border-gray-400"
                             : "bg-orange-600 text-white hover:bg-orange-700"
                         }`}
                       >

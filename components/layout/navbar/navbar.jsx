@@ -23,8 +23,8 @@ const Navbar = () => {
   return (
     <section
       id="navbar"
-      className={`fixed top-0 left-0 w-full z-50 transition duration-300 bg-white ${
-        isScrolled ? "shadow-md" : ""
+      className={`fixed top-0 left-0 w-full z-50 transition duration-300 bg-white dark:bg-inherit ${
+        isScrolled ? "shadow-md dark:border-b dark:border-white/[0.2]" : ""
       }`}
     >
       <div className="py-4">

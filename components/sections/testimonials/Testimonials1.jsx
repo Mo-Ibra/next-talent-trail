@@ -28,7 +28,7 @@ function Testimonials1() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`rounded-xl bg-card text-card-foreground border-0 shadow-lg ${testimonial.author.class}`}
+              className={`rounded-xl pt-5 bg-card text-card-foreground border-0 shadow-lg dark:bg-gray-800 ${testimonial.author.class}`}
             >
               <div className="p-6 pt-0">
                 <div className="flex items-start justify-between">
@@ -71,7 +71,7 @@ function Testimonials1() {
       </div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-96 h-96 bg-orange-500/20 opacity-40 -z-10 rounded-full blur-3xl bottom-2/4 right-2/4"></div>
-        <div className="absolute w-96 h-96 bg-orange-50 opacity rounded-full top-10 -right-52 -z-10"></div>
+        <div className="absolute w-96 h-96 bg-orange-50 dark:bg-orange-500/10 opacity rounded-full top-10 -right-52 -z-10"></div>
         <MapPin className="absolute w-96 h-96 text-orange-500/5 -bottom-10 -left-20 -z-10" />
       </div>
     </section>

@@ -58,7 +58,7 @@ const Hero1 = () => {
             />
 
             {/* Card */}
-            <div className="absolute top-0 left-0 bg-white rounded-lg shadow-lg p-6 flex items-center gap-4 animate-bounce">
+            <div className="absolute top-0 left-0 bg-white dark:bg-slate-900 rounded-lg shadow-lg p-6 flex items-center gap-4 animate-bounce">
               <div className="bg-orange-500/10 rounded-lg">
                 <ArrowBigUp className="size-10 text-orange-500" />
               </div>
@@ -69,7 +69,7 @@ const Hero1 = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-0 right-0 bg-white rounded-lg shadow-lg p-6 flex items-center gap-4">
+            <div className="absolute bottom-0 right-0 bg-white dark:bg-slate-900 rounded-lg shadow-lg p-6 flex items-center gap-4">
               <div className="bg-orange-500/10 p-2 rounded-lg">
                 <UploadCloud className="size-10 text-orange-500" />
               </div>
@@ -85,9 +85,9 @@ const Hero1 = () => {
 
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-96 h-96 bg-orange-500/20 opacity-20 rounded-full blur-3xl -top-10 -left-20"></div>
+        <div className="absolute w-96 h-96 bg-orange-500/20 opacity-20 rounded-full blur-3xl top-20 -left-20"></div>
         <HandshakeIcon className="absolute w-96 h-96 text-orange-500/5 -bottom-10 -right-20 -z-10" />
-        <MapPin className="absolute w-96 h-96 text-orange-500/5 -top-10 -left-20 -z-10" />
+        <MapPin className="absolute w-96 h-96 text-orange-500/5 top-20 -left-20 -z-10" />
       </div>
     </section>
   );

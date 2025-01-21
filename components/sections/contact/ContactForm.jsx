@@ -157,7 +157,7 @@ const ContactForm = () => {
       </div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-96 h-96 bg-orange-500/20 opacity-40 -z-10 rounded-full blur-3xl top-96 -left-20"></div>
-        <div className="absolute w-96 h-96 bg-orange-50 opacity rounded-full bottom-10 -right-52 -z-10"></div>
+        <div className="absolute w-96 h-96 bg-orange-50 dark:bg-orange-500/10 opacity rounded-full bottom-10 -right-52 -z-10"></div>
       </div>
     </div>
   );

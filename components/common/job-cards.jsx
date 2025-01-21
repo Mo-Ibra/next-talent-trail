@@ -15,7 +15,7 @@ const avatars = [
 
 export const ContentFulJobCard = ({ job }) => {
   return (
-    <Card key={job.id} className="overflow-hidden">
+    <Card key={job.id} className="overflow-hidden dark:bg-gray-800">
       <CardContent className="p-6">
         <div className="space-y-4">
           {/* Header */}
@@ -70,7 +70,7 @@ export const ContentFulJobCard = ({ job }) => {
                 +{job.applicants}
               </div>
             </div>
-            <Button variant="outline">
+            <Button variant="outline" className="dark:bg-orange-600 dark:hover:bg-orange-700">
               Apply Now
               <LucideArrowUp className="ml-2 size-4" />
             </Button>
@@ -96,7 +96,7 @@ export const ContentFulJobCard = ({ job }) => {
 
 export const BasicJobCard = ({ job }) => {
   return (
-    <Card className="bg-white relative">
+    <Card className="bg-white dark:bg-gray-800 relative">
       <CardContent className="p-6">
         <div className="space-y-4">
           {/* Job Type and Time */}
@@ -127,7 +127,7 @@ export const BasicJobCard = ({ job }) => {
             </div>
           </div>
 
-          <hr />
+          <hr className="dark:border-gray-600" />
 
           {/* Job Title */}
           <div>
@@ -140,9 +140,9 @@ export const BasicJobCard = ({ job }) => {
       {/* Action Button */}
       <Button
         size="icon"
-        className="absolute -bottom-5 right-2/4 rounded-full w-10 h-10 bg-orange-50 hover:bg-orange-100"
+        className="absolute -bottom-5 right-2/4 rounded-full w-10 h-10 bg-orange-50 hover:bg-orange-100 dark:bg-orange-500 dark:hover:bg-orange-600"
       >
-        <Check className="text-orange-500 font-bold" />
+        <Check className="text-orange-500 font-bold dark:text-white" />
       </Button>
     </Card>
   );

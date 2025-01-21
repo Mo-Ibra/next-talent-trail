@@ -32,7 +32,7 @@ const JobSidebar = () => {
   const [selectedJobTypes, setSelectedJobTypes] = useState(["full-time"]);
 
   return (
-    <div className="space-y-6 p-6 hidden lg:block sticky top-4 self-start shrink-0 border">
+    <div className="space-y-6 p-6 hidden lg:block sticky top-20 self-start shrink-0 border">
 
       {/* Search */}
       <div className="space-y-2">

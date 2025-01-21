@@ -15,7 +15,7 @@ export const testimonials = [
       name: "Rodri Alba",
       handle: "@rodri_spn",
       image: "/images/avatars/2.png",
-      class: "-rotate-1",
+      class: "-rotate-3",
     },
     content:
       "As a busy professional, Simple has been a lifesaver. It streamlines my workflow, allowing me to focus on what truly matters. Plus, its minimalist design is a breath of fresh air.",

@@ -5,7 +5,7 @@ const Subscribe = () => {
   return (
     <section className="py-16 px-4 md:px-6">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="relative overflow-hidden p-12 shadow-md rounded-lg bg-orange-50">
+        <div className="relative overflow-hidden p-12 shadow-md rounded-lg bg-orange-50 dark:bg-gray-800">
           <div className="flex flex-col md:flex-row justify-between gap-8 items-center">
             <div className="flex flex-col gap-4 w-2/3">
               <h3 className="text-2xl font-bold z-20">Explore a job now!</h3>
