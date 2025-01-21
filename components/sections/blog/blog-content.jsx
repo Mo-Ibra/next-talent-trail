@@ -66,7 +66,7 @@ function BlogContent({ content }) {
                   <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
                     Introduction
                   </h2>
-                  <p className="leading-7">
+                  <p className="leading-7 dark:text-gray-400">
                     To create extensions that improve functionality and bring
                     joy to users, it's important to focus on user-centered
                     design, thoughtful layout strategies, and effective use of
@@ -92,22 +92,22 @@ function BlogContent({ content }) {
                   <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
                     Design principles
                   </h2>
-                  <p className="leading-7">
+                  <p className="leading-7 dark:text-gray-400">
                     Your UI should adhere to the following key principles:
                   </p>
                   <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                    <li>
+                    <li className="dark:text-gray-400">
                       <strong>Customer-focused:</strong> The app's purpose and
                       value should be defined around the needs of the users. It
                       should solve a unique problem for them.
                     </li>
-                    <li>
+                    <li className="dark:text-gray-400">
                       <strong>Simplicity:</strong> Your app should be simple to
                       use and not require extensive learning to get started. It
                       should complement the visual abstraction of code, not
                       complicate it.
                     </li>
-                    <li>
+                    <li className="dark:text-gray-400">
                       <strong>Design:</strong> Use consistent design elements
                       like color, typography, and button styles throughout your
                       App. This improves the user experience and makes your app

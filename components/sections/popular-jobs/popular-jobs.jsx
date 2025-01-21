@@ -5,7 +5,7 @@ import { ContentFulJobCard } from "@/components/common/job-cards";
 function PopularJobs({ jobs }) {
 
   return (
-    <section className="py-16 px-4 md:px-6 bg-orange-50 dark:bg-gray-900">
+    <section className="py-16 px-4 md:px-6 bg-orange-50 dark:bg-darkbackground">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="text-center space-y-4 mb-12">
           <Badge variant="outline" className="text-orange-500">

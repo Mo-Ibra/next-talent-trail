@@ -15,7 +15,7 @@ const avatars = [
 
 export const ContentFulJobCard = ({ job }) => {
   return (
-    <Card key={job.id} className="overflow-hidden dark:bg-gray-800">
+    <Card key={job.id} className="overflow-hidden dark:bg-darkgray">
       <CardContent className="p-6">
         <div className="space-y-4">
           {/* Header */}
@@ -70,7 +70,7 @@ export const ContentFulJobCard = ({ job }) => {
                 +{job.applicants}
               </div>
             </div>
-            <Button variant="outline" className="dark:bg-orange-600 dark:hover:bg-orange-700">
+            <Button variant="outline" className="dark:text-white hover:bg-orange-600">
               Apply Now
               <LucideArrowUp className="ml-2 size-4" />
             </Button>
@@ -82,7 +82,7 @@ export const ContentFulJobCard = ({ job }) => {
               <Badge
                 key={skill}
                 variant="secondary"
-                className="bg-orange-50 text-orange-500 hover:bg-orange-100 cursor-pointer"
+                className="bg-orange-50 text-orange-500 hover:bg-orange-100 cursor-pointer dark:bg-orange-500 dark:text-white dark:hover:bg-orange-600"
               >
                 {skill}
               </Badge>
@@ -96,12 +96,12 @@ export const ContentFulJobCard = ({ job }) => {
 
 export const BasicJobCard = ({ job }) => {
   return (
-    <Card className="bg-white dark:bg-gray-800 relative">
+    <Card className="bg-white dark:bg-darkgray relative">
       <CardContent className="p-6">
         <div className="space-y-4">
           {/* Job Type and Time */}
           <div className="flex justify-between items-center text-sm">
-            <Badge variant="secondary" className="bg-orange-50 text-orange-500">
+            <Badge variant="secondary" className="bg-orange-50 text-orange-500 dark:bg-orange-500 dark:text-white">
               Full Time
             </Badge>
             <Badge variant="outline" className="text-muted-foreground">

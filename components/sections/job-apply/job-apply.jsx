@@ -145,7 +145,7 @@ function JobApply() {
               <div>
                 <label
                   htmlFor="candidateName"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-400"
                 >
                   Your Name <span className="text-orange-500">*</span>
                 </label>
@@ -167,7 +167,7 @@ function JobApply() {
               <div>
                 <label
                   htmlFor="candidateEmail"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-400"
                 >
                   Your Email <span className="text-orange-500">*</span>
                 </label>
@@ -189,7 +189,7 @@ function JobApply() {
               <div>
                 <label
                   htmlFor="candidateCV"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2"
                 >
                   Your CV <span className="text-orange-500">*</span>
                 </label>
@@ -225,7 +225,7 @@ function JobApply() {
               <div>
                 <label
                   htmlFor="location"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-400"
                 >
                   Your Location <span className="text-orange-500">*</span>
                 </label>
@@ -256,7 +256,7 @@ function JobApply() {
               <div>
                 <label
                   htmlFor="motivationLetter"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-400"
                 >
                   Motivation letter <span className="text-orange-500">*</span>
                 </label>
@@ -278,7 +278,7 @@ function JobApply() {
               <div>
                 <label
                   htmlFor="expectedSalary"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-400"
                 >
                   Expected Salary <span className="text-orange-500">*</span>
                 </label>
@@ -300,7 +300,7 @@ function JobApply() {
               <div>
                 <label
                   htmlFor="jobType"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-400"
                 >
                   Your Preferorange Job Type{" "}
                   <span className="text-orange-500">*</span>
@@ -348,13 +348,13 @@ function JobApply() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="hidden lg:block bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 fixed top-0 right-0 w-1/2 h-full">
+      <div className="hidden lg:block bg-gradient-to-br from-blue-50 to-purple-50 dark:from-darkbackground dark:to-darkbackground fixed top-0 right-0 w-1/2 h-full">
         <div className="absolute inset-0 p-12 overflow-auto grid justify-center items-center">
           <div className="space-y-8 max-w-[34rem]">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-orange-300 opacity-15 duration-300 hover:opacity-100 cursor-pointer ${
+                className={`bg-white dark:bg-darkgray rounded-lg p-6 shadow-sm border border-orange-300 opacity-15 duration-300 hover:opacity-100 cursor-pointer ${
                   testimonial.isVisible && "!opacity-100"
                 }`}
               >

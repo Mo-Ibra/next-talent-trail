@@ -79,7 +79,7 @@ function Pricing() {
               onClick={() => setIsYearly(true)}
               className={`px-4 py-2 rounded-full text-sm transition-colors ${
                 isYearly
-                  ? "bg-white dark:bg-gray-900 shadow-sm text-foreground"
+                  ? "bg-white dark:bg-darkbackground shadow-sm text-foreground"
                   : "text-muted-foreground"
               }`}
             >
@@ -90,7 +90,7 @@ function Pricing() {
               onClick={() => setIsYearly(false)}
               className={`px-4 py-2 rounded-full text-sm transition-colors ${
                 !isYearly
-                  ? "bg-white dark:bg-gray-900 shadow-sm text-foreground"
+                  ? "bg-white dark:bg-darkbackground shadow-sm text-foreground"
                   : "text-muted-foreground"
               }`}
             >
@@ -105,7 +105,7 @@ function Pricing() {
               key={plan.name}
               className={
                 plan.highlighted
-                  ? "bg-slate-900 text-slate-50 dark:bg-gray-900 dark:text-gray-400"
+                  ? "bg-slate-900 text-slate-50 dark:bg-darkbackground dark:text-gray-400"
                   : ""
               }
             >
@@ -145,7 +145,7 @@ function Pricing() {
                 <Button
                   className={`w-full ${
                     plan.highlighted
-                      ? "bg-white text-slate-900 hover:bg-slate-200 dark:bg-gray-900 dark:text-gray-400 dark:hover:bg-orange-700 dark:hover:text-white"
+                      ? "bg-white text-slate-900 hover:bg-slate-200 dark:bg-darkbackground dark:text-gray-400 dark:hover:bg-orange-600 dark:hover:text-white dark:border-gray-700 dark:border"
                       : "bg-orange-600 text-white hover:bg-orange-700"
                   }`}
                 >
