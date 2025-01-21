@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { MessageCircle } from "lucide-react";
 import { Pagination } from "@/components/common/pagination";
 import { useState } from "react";
+import Link from "next/link";
 
 function CandidatesGrid({ candidates, withPagination = false }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,13 +30,15 @@ function CandidatesGrid({ candidates, withPagination = false }) {
             <Card key={candidate.id} className="relative group">
               <CardContent className="p-6">
                 <div className="relative flex justify-center mb-4">
-                  <Image
-                    src={candidate.image || "/placeholder.svg"}
-                    alt={candidate.name}
-                    width={640}
-                    height={400}
-                    className="rounded-lg cursor-pointer hover:scale-105 duration-300"
-                  />
+                  <Link href={`/candidates/${candidate.slug}`}>
+                    <Image
+                      src={candidate.image || "/placeholder.svg"}
+                      alt={candidate.name}
+                      width={640}
+                      height={400}
+                      className="rounded-lg cursor-pointer hover:scale-105 duration-300"
+                    />
+                  </Link>
                 </div>
 
                 <div className="text-center mb-4">
@@ -67,9 +70,11 @@ function CandidatesGrid({ candidates, withPagination = false }) {
                 </div>
 
                 <div className="flex gap-2">
-                  <Button className="flex-1 bg-orange-600 hover:bg-orange-700">
-                    Profile
-                  </Button>
+                  <Link href={`/candidates/${candidate.slug}`}>
+                    <Button className="flex-1 bg-orange-600 hover:bg-orange-700">
+                      Profile
+                    </Button>
+                  </Link>
                   <Button variant="outline" size="icon">
                     <MessageCircle className="h-4 w-4" />
                   </Button>
