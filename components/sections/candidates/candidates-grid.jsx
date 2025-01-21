@@ -13,7 +13,7 @@ function CandidatesGrid({ candidates, withPagination = false }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
-    <section className="py-16 px-4 md:px-6">
+    <section className="py-16 px-4 md:px-6 relative">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="text-center space-y-4 mb-12">
           <Badge variant="outline" className="text-orange-500">
@@ -91,6 +91,11 @@ function CandidatesGrid({ candidates, withPagination = false }) {
             className="mt-8"
           />
         )}
+      </div>
+
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-96 h-96 bg-orange-500/20 dark:bg-orange-500/10 opacity-20 -z-10 rounded-full top-20 -left-20"></div>
+        <div className="absolute w-96 h-96 bg-orange-50 dark:bg-orange-500/10 opacity rounded-full bottom-10 -right-52 -z-10"></div>
       </div>
     </section>
   );

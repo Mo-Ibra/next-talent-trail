@@ -33,7 +33,7 @@ const Hero1 = () => {
               <input
                 type="text"
                 placeholder="Search by keyword, title, or company..."
-                className="w-full py-3 indent-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-orange-500 focus:border-orange-500 text-gray-500 font-bold"
+                className="w-full py-3 indent-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-orange-500 focus:border-orange-500 text-gray-500 font-bold dark:bg-darkgray dark:border-gray-800"
               />
             </form>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">

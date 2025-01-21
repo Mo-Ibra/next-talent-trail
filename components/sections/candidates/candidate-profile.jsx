@@ -31,7 +31,7 @@ const CandidateProfile = ({ candidate }) => {
   };
 
   return (
-    <div className="min-h-screen bg-orange-50 dark:bg-gray-900 pb-16">
+    <div className="min-h-screen bg-orange-50 dark:bg-darkbackground pb-16">
       {/* Header Image */}
       <div className="relative h-[400px] w-full">
         <Image

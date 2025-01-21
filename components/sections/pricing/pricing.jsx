@@ -161,7 +161,7 @@ function Pricing() {
           className="absolute w-60 h-60 text-orange-500/20 opacity-40 -z-10 top-20 right-10"
           strokeWidth={3}
         />
-        <div className="absolute w-96 h-96 bg-orange-500/20 opacity-40 -z-10 rounded-full blur-3xl bottom-20 -left-20"></div>
+        <div className="absolute w-96 h-96 bg-orange-500/20 opacity-40 -z-10 rounded-full blur-3xl dark:blur-0 bottom-20 -left-20"></div>
       </div>
     </section>
   );

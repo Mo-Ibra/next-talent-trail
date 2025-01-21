@@ -43,7 +43,7 @@ const relatedJobs = [
 
 function JobDetail2() {
   return (
-    <div className="min-h-screen relative bg-orange-50 dark:bg-gray-900 py-20">
+    <div className="min-h-screen relative bg-orange-50 dark:bg-darkbackground py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
         <Link
@@ -60,7 +60,7 @@ function JobDetail2() {
           <div>
             <div className="lg:col-span-1 lg:top-20 lg:sticky">
               {/* Company Publisher */}
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border p-6 mb-6">
+              <div className="bg-white dark:bg-darkgray rounded-lg shadow-sm border p-6 mb-6">
                 <div className="flex items-center gap-4 mb-6">
                   <Avatar className="h-12 w-12">
                     <AvatarImage
@@ -113,7 +113,7 @@ function JobDetail2() {
               </div>
 
               {/* Newsletter */}
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border p-6">
+              <div className="bg-white dark:bg-darkgray rounded-lg shadow-sm border p-6">
                 <div className="text-center mb-6">
                   <h3 className="font-medium mb-2">Land your dream job</h3>
                   <p className="text-sm text-gray-500">
@@ -132,7 +132,7 @@ function JobDetail2() {
 
           {/* Main Content */}
           <div className="lg:col-span-2">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-8 border">
+            <div className="bg-white dark:bg-darkgray rounded-lg shadow-sm p-6 mb-8 border">
               <h1 className="text-2xl font-bold mb-6">
                 Engineering Manager Developer Experience
               </h1>
@@ -250,7 +250,7 @@ function JobDetail2() {
             </div>
 
             {/* Related Jobs */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border p-6">
+            <div className="bg-white dark:bg-darkgray rounded-lg shadow-sm border p-6">
               <h2 className="text-xl font-semibold mb-6">Related Jobs</h2>
               <div className="space-y-6">
                 {relatedJobs.map((job, index) => (
