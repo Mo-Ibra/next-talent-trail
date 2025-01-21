@@ -38,7 +38,7 @@ const navigation = [
 
 function BlogContent({ content }) {
   return (
-    <section className="py-16 px-4 md:px-6">
+    <section className="py-20 px-4 md:px-6">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex gap-6 min-h-screen">
           {/* Main Content */}
@@ -149,7 +149,7 @@ function BlogContent({ content }) {
             </div>
           </div>
           {/* Sidebar */}
-          <div className="hidden lg:block sticky top-4 self-start w-64 shrink-0 border-l">
+          <div className="hidden lg:block sticky top-20 self-start w-64 shrink-0 border-l">
             <div className="pl-6">
               {navigation.map((group) => (
                 <div key={group.title} className="pb-8">

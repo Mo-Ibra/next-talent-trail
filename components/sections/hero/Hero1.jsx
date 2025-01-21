@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const Hero1 = () => {
   return (
-    <section className="py-12 grid justify-center items-center h-[92vh] relative md:overflow-hidden">
+    <section className="py-12 grid justify-center items-center h-[100vh] relative md:overflow-hidden">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           {/* Left Content */}

@@ -43,7 +43,7 @@ const relatedJobs = [
 
 function JobDetail2() {
   return (
-    <div className="min-h-screen relative bg-orange-50 py-8">
+    <div className="min-h-screen relative bg-orange-50 py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
         <Link
@@ -58,7 +58,7 @@ function JobDetail2() {
 
           {/* Sidebar */}
           <div>
-            <div className="lg:col-span-1 lg:top-5 lg:sticky">
+            <div className="lg:col-span-1 lg:top-20 lg:sticky">
               {/* Company Publisher */}
               <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
                 <div className="flex items-center gap-4 mb-6">
@@ -132,7 +132,7 @@ function JobDetail2() {
 
           {/* Main Content */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <div className="bg-white rounded-lg shadow-sm p-6 mb-8 border">
               <h1 className="text-2xl font-bold mb-6">
                 Engineering Manager Developer Experience
               </h1>

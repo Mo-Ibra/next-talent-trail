@@ -52,7 +52,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen py-16 relative">
       <GoogleMaps />
       <div className="container mx-auto px-4 sm:px-8 lg:px-12 py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
