@@ -9,6 +9,8 @@ import Subscribe from "@/components/sections/subscribe/subscribe";
 import { useParams } from "next/navigation";
 
 import { blogPosts } from "@/data/blog-posts";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
 
 function SingleBlogPage() {
   const { slug } = useParams();
@@ -34,6 +36,8 @@ function SingleBlogPage() {
       <Subscribe />
       <Blog />
       <Footer />
+      <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }

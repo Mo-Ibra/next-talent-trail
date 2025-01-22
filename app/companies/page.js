@@ -6,6 +6,8 @@ import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 import Testimonials1 from "@/components/sections/testimonials/Testimonials1";
 import TopRecruiters from "@/components/sections/top-recruiters/top-recruiters";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
 
 function CompaniesPage() {
 
@@ -27,6 +29,8 @@ function CompaniesPage() {
       <Subscribe />
       <Blog />
       <Footer />
+      <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }

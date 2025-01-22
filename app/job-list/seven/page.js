@@ -6,6 +6,8 @@ import JobListSidebar4 from "@/components/sections/job-list/JobListSidebar4";
 
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
 
 function JobListSevenPage() {
   const breadcrumbItems = [
@@ -25,6 +27,8 @@ function JobListSevenPage() {
       <Subscribe />
       <Blog />
       <Footer />
+      <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }

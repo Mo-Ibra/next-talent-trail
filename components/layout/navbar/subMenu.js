@@ -1,7 +1,35 @@
 import { Book, Sunset, Trees, Zap } from "lucide-react";
 
+// Home
+export const subMenuItemsHome = [
+  {
+    title: "Home One",
+    description: "This is the first home page",
+    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    href: "/",
+  },
+  {
+    title: "Home Two",
+    description: "This is the second home page",
+    icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
+    href: "/home/two",
+  },
+  {
+    title: "Home Three",
+    description: "This is the third home page",
+    icon: <Trees className="size-5 shrink-0 text-orange-500" />,
+    href: "/home/three",
+  },
+  {
+    title: "Home Four",
+    description: "This is the fourth home page",
+    icon: <Book className="size-5 shrink-0 text-orange-500" />,
+    href: "/home/four",
+  },
+]
+
 // Jobs
-export const subMenuItemsOne = [
+export const subMenuItemsJob = [
   {
     title: "Categories",
     description: "Here you can find a job category that fits your needs",
@@ -89,7 +117,7 @@ export const subMenuItemsOne = [
 ];
 
 // Pages
-export const subMenuItemsTwo = [
+export const subMenuItemsPages = [
   {
     title: "Blog",
     description: "The latest industry news, updates, and info",
@@ -147,7 +175,7 @@ export const subMenuItemsTwo = [
 ];
 
 // Utils
-export const subMenuItemsThree = [
+export const subMenuItemsUtils = [
   {
     title: "Login",
     description: "You can login to your account from here",

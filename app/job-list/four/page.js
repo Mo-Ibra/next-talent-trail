@@ -5,6 +5,8 @@ import Footer from "@/components/layout/footer/Footer";
 import JobListSidebar1 from "@/components/sections/job-list/JobListSidebar1";
 import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
 
 function JobListFourPage() {
 
@@ -25,6 +27,8 @@ function JobListFourPage() {
       <Subscribe />
       <Blog />
       <Footer />
+      <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }

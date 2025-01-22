@@ -10,6 +10,9 @@ import { candidates } from "@/data/candidates";
 import CandidateProfile from "@/components/sections/candidates/candidate-profile";
 import { useParams } from "next/navigation";
 
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
+
 function CandidateProfilePage() {
 
   const { slug } = useParams();
@@ -33,6 +36,8 @@ function CandidateProfilePage() {
       <Subscribe />
       <Blog />
       <Footer />
+      <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }

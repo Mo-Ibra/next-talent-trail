@@ -5,6 +5,8 @@ import Logos from "@/components/sections/logos/Logos";
 import Pricing from "@/components/sections/pricing/pricing";
 import PricingFeatures from "@/components/sections/pricing/pricing-features";
 import Subscribe from "@/components/sections/subscribe/subscribe";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
 
 function PricingPage() {
 
@@ -25,6 +27,8 @@ function PricingPage() {
       <Logos />
       <Subscribe />
       <Footer />
+      <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }

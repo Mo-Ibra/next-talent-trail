@@ -7,6 +7,8 @@ import Subscribe from "@/components/sections/subscribe/subscribe";
 import CandidatesGrid from "@/components/sections/candidates/candidates-grid";
 
 import { candidates } from "@/data/candidates";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
 
 function CandidatePage() {
   const breadcrumbItems = [
@@ -26,6 +28,8 @@ function CandidatePage() {
       <Subscribe />
       <Blog />
       <Footer />
+      <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }

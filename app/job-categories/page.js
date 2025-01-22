@@ -7,6 +7,8 @@ import Logos from "@/components/sections/logos/Logos";
 import Subscribe from "@/components/sections/subscribe/subscribe";
 
 import { categories } from "@/data/categories";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import ToggleThemeButton from "@/components/common/toggle-theme-button";
 
 function JobCategoriesPage() {
   const breadcrumbItems = [
@@ -26,6 +28,8 @@ function JobCategoriesPage() {
       <Subscribe />
       <Blog />
       <Footer />
+      <ScrollToTopButton />
+      <ToggleThemeButton />
     </>
   );
 }
