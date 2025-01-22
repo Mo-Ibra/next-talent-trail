@@ -13,7 +13,7 @@ import { faqs } from "@/data/faqs";
 
 function FAQ1() {
   return (
-    <section className="py-16 px-4 md:px-6">
+    <section className="py-32 px-4 md:px-6">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid gap-8 lg:grid-cols-2 items-center">
           <div className="relative">
@@ -56,8 +56,8 @@ function FAQ1() {
             </p>
 
             <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
+              {faqs.map((faq) => (
+                <AccordionItem key={faq.id} value={`item-${faq.id}`}>
                   <AccordionTrigger className="text-left">
                     {faq.question}
                   </AccordionTrigger>

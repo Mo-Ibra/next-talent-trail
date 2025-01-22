@@ -27,7 +27,6 @@ function Home() {
       <Hero1 />
       <Categories1 categories={renderedCategories} />
       <PopularJobs jobs={renderedJobs} />
-      <FeaturedJobs jobs={renderedJobs} />
       <TopRecruiters />
       <Testimonials1 />
       <Logos />

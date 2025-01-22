@@ -162,6 +162,12 @@ const MobileNav = () => {
               >
                 Contact
               </Link>
+              <Link
+                href="/documentation"
+                className="font-semibold hover:text-orange-500"
+              >
+                Documentation
+              </Link>
             </div>
           </SheetContent>
         </Sheet>
