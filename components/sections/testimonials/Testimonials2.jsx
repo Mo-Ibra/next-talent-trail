@@ -3,68 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-const testimonials = [
-  {
-    rating: 5,
-    content:
-      "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque penatibus.",
-    author: {
-      name: "Coriss Ambady",
-      role: "Financial Analyst",
-      image: "/images/avatars/1.jpg",
-    },
-  },
-  {
-    rating: 5,
-    content:
-      "Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-    author: {
-      name: "Cory Zamora",
-      role: "Marketing Specialist",
-      image: "/images/avatars/2.jpg",
-    },
-  },
-  {
-    rating: 5,
-    content:
-      "Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum. Curabitur blandit tempus porttitor.",
-    author: {
-      name: "Nikolas Brooten",
-      role: "Sales Manager",
-      image: "/images/avatars/3.jpg",
-    },
-  },
-  {
-    rating: 5,
-    content:
-      "Etiam adipiscing tincidunt elit convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam rhoncus. Donec id elit non mi porta gravida at eget metus.",
-    author: {
-      name: "Coriss Ambady",
-      role: "Financial Analyst",
-      image: "/images/avatars/4.jpg",
-    },
-  },
-  {
-    rating: 5,
-    content:
-      "Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    author: {
-      name: "Laura Widerski",
-      role: "Sales Specialist",
-      image: "/images/avatars/1.jpg",
-    },
-  },
-  {
-    rating: 5,
-    content:
-      "Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus magnis dis montes, nascetur ridiculus mus. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-    author: {
-      name: "Jackie Sanders",
-      role: "Investment Planner",
-      image: "/images/avatars/2.jpg",
-    },
-  },
-];
+import { testimonials } from "@/data/testimonials";
 
 function Testimonials2() {
   return (
@@ -92,7 +31,7 @@ function Testimonials2() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                      className="h-5 w-5 fill-orange-400 text-orange-400"
                     />
                   ))}
                 </div>
