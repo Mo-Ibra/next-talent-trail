@@ -9,6 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero1 = () => {
   return (
@@ -16,9 +17,8 @@ const Hero1 = () => {
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           {/* Left Content */}
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <Badge variant="outline">
-              New Release
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left mt-20 lg:mt-0">
+            <Badge variant="outline">Find Your Dream Job
               <ArrowDownRight className="ml-2 size-4" />
             </Badge>
             <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
@@ -51,10 +51,12 @@ const Hero1 = () => {
 
           {/* Right Content (Image Section) */}
           <div className="mx-auto relative my-4 z-20">
-            <img
-              src="/images/hero/4.png"
+            <Image
+              src="/images/hero/1.png"
               alt="placeholder hero"
               className="rounded-lg object-cover"
+              width={980}
+              height={980}
             />
 
             {/* Card */}

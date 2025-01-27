@@ -8,6 +8,7 @@ import Features1 from "@/components/sections/features/Features1";
 import FAQ1 from "@/components/sections/faq/Faq1";
 import Categories2 from "@/components/sections/categories/Categories2";
 import Team from "@/components/sections/team/Team";
+import Hero2 from "@/components/sections/hero/Hero2";
 
 import ScrollToTopButton from "@/components/common/scroll-to-top-button";
 import ToggleThemeButton from "@/components/common/toggle-theme-button";
@@ -23,7 +24,7 @@ function HomePageTwo() {
   return (
     <>
       <Navbar />
-      <Hero1 />
+      <Hero2 />
       <Categories2 categories={renderedCategories} />
       <FeaturedJobs jobs={renderedJobs} />
       <Features1 />
