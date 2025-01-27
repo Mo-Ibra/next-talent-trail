@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Briefcase, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const popularSearches = [
   "Designer",
@@ -35,8 +36,7 @@ const Hero2 = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage:
-            'url("/images/hero/2.jpg")',
+          backgroundImage: 'url("/images/hero/2.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-darkbackground/70" />
@@ -81,12 +81,14 @@ const Hero2 = () => {
                 </SelectContent>
               </Select>
             </div>
-            <Button
-              type="submit"
-              className="h-12 px-8 bg-orange-600 hover:bg-orange-700"
-            >
-              Search
-            </Button>
+            <Link href="/job-list/one">
+              <Button
+                type="submit"
+                className="h-12 px-8 bg-orange-600 hover:bg-orange-700"
+              >
+                Search
+              </Button>
+            </Link>
           </div>
         </form>
 
@@ -109,6 +111,6 @@ const Hero2 = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Hero2;

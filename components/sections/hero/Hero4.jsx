@@ -1,9 +1,4 @@
-import {
-  ArrowDownRight,
-  ArrowBigUp,
-  DamIcon,
-  UploadCloud,
-} from "lucide-react";
+import { ArrowDownRight, ArrowBigUp, DamIcon, UploadCloud } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -15,7 +10,6 @@ const Hero4 = () => {
     <section className="py-12 grid justify-center items-center h-[100vh] relative md:overflow-hidden dark:bg-darkbackground">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid items-center gap-8 lg:grid-cols-2">
-
           {/* Left Content (Image Section) */}
           <div className="mx-auto relative my-4 z-20 lg:block hidden">
             <Image
@@ -61,9 +55,11 @@ const Hero4 = () => {
               />
             </form>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button className="w-full bg-orange-600 hover:bg-orange-700 sm:w-auto">
-                Search Now
-              </Button>
+              <Link href="/job-list/seven">
+                <Button className="w-full bg-orange-600 hover:bg-orange-700 sm:w-auto">
+                  Search Now
+                </Button>
+              </Link>
               <Link href="/job-categories">
                 <Button variant="outline" className="w-full sm:w-auto">
                   Browse By Categories

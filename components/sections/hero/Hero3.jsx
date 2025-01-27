@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Play, Briefcase } from "lucide-react";
+import Link from "next/link";
 
 const popularSearches = [
   "Designer",
@@ -15,7 +16,6 @@ const popularSearches = [
 ];
 
 const Hero3 = () => {
-
   const [keywords, setKeywords] = useState("");
 
   const handleSearch = (e) => {
@@ -25,13 +25,11 @@ const Hero3 = () => {
 
   return (
     <div className="relative min-h-[600px] h-[100vh] flex items-center justify-center">
-
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage:
-            'url("/images/hero/4.jpg")',
+          backgroundImage: 'url("/images/hero/4.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-darkbackground/60" />
@@ -66,12 +64,14 @@ const Hero3 = () => {
                       className="pl-10 bg-white dark:bg-darkgray h-12 rounded-r-none"
                     />
                   </div>
-                  <Button
-                    type="submit"
-                    className="h-12 px-8 bg-orange-600 hover:bg-orange-700 rounded-l-none"
-                  >
-                    Search
-                  </Button>
+                  <Link href="/job-list/four">
+                    <Button
+                      type="submit"
+                      className="h-12 px-8 bg-orange-600 hover:bg-orange-700 rounded-l-none"
+                    >
+                      Search
+                    </Button>
+                  </Link>
                 </div>
               </form>
 

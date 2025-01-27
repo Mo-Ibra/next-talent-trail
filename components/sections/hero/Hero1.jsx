@@ -18,7 +18,8 @@ const Hero1 = () => {
         <div className="grid items-center gap-8 lg:grid-cols-2">
           {/* Left Content */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left mt-20 lg:mt-0">
-            <Badge variant="outline">Find Your Dream Job
+            <Badge variant="outline">
+              Find Your Dream Job
               <ArrowDownRight className="ml-2 size-4" />
             </Badge>
             <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
@@ -37,9 +38,11 @@ const Hero1 = () => {
               />
             </form>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button className="w-full bg-orange-600 hover:bg-orange-700 sm:w-auto">
-                Search Now
-              </Button>
+              <Link href="/job-list/one">
+                <Button className="w-full bg-orange-600 hover:bg-orange-700 sm:w-auto">
+                  Search Now
+                </Button>
+              </Link>
               <Link href="/job-categories">
                 <Button variant="outline" className="w-full sm:w-auto">
                   Browse By Categories
