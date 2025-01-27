@@ -13,7 +13,6 @@ function DocsMain() {
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex gap-6 min-h-screen">
 
-
           {/* Main Content */}
           <div className="flex-1 min-w-0">
             <div className="container max-w-5xl py-6 lg:py-10">

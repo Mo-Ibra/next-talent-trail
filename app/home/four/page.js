@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/navbar/navbar";
 import Footer from "@/components/layout/footer/Footer";
-import Hero1 from "@/components/sections/hero/Hero1";
+import Hero4 from "@/components/sections/hero/Hero4";
 import Testimonials1 from "@/components/sections/testimonials/Testimonials1";
 import PopularJobs from "@/components/sections/popular-jobs/popular-jobs";
 import TopRecruiters from "@/components/sections/top-recruiters/top-recruiters";
@@ -24,7 +24,7 @@ function HomePageThree() {
   return (
     <>
       <Navbar />
-      <Hero1 />
+      <Hero4 />
       <Categories2 categories={renderedCategories} />
       <PopularJobs jobs={renderedJobs} />
       <TopRecruiters />
