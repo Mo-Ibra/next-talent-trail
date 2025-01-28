@@ -45,10 +45,10 @@ Talent Trail is a modern job board application built with **Next.js**, **Tailwin
 ## 📸 Screenshots
 
 ### Homepage (Light)
-![Homepage Screenshot](preview/main-1.png)
+![Homepage Screenshot](public/preview/main-1.png)
 
 ### Homepage (Dark)
-![Job Details Screenshot](preview/main-1-dark.png)
+![Job Details Screenshot](public/preview/main-1-dark.png)
 
 ---
 
