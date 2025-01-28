@@ -1,9 +1,17 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaTwitter } from "react-icons/fa";
 import { Badge } from "@/components/ui/badge";
 import { MapPin } from "lucide-react";
 
 import { testimonials } from "@/data/testimonials";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 function Testimonials1() {
   return (
@@ -26,9 +34,13 @@ function Testimonials1() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
               className="rounded-xl pt-5 bg-card text-card-foreground border-0 shadow-lg dark:bg-darkgray"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
             >
               <div className="p-6 pt-0">
                 <div className="flex items-start justify-between">
@@ -65,7 +77,7 @@ function Testimonials1() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -7,6 +10,11 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { features } from "@/data/features";
 import { Lamp } from "lucide-react";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const Features1 = () => {
   return (
@@ -24,26 +32,34 @@ const Features1 = () => {
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
           {features.map((feature, i) => (
-            <Card className="rounded-br-[80px] shadow-md" key={i}>
-              <CardHeader className="pb-1">
-                <div className="size-12 bg-orange-100 rounded-full flex items-center justify-center hover:bg-orange-200 cursor-pointer duration-300 my-2">
-                  {feature.icon}
-                </div>
-              </CardHeader>
-              <CardContent className="text-left">
-                <h2 className="mb-1 text-lg font-semibold">{feature.title}</h2>
-                <p className="leading-snug text-muted-foreground">
-                  {feature.description}
-                </p>
-              </CardContent>
-              <CardFooter className="justify-end pb-0 pr-0">
-                <img
-                  className="h-60 w-full rounded-tl-md object-cover object-top rounded-br-[80px]"
-                  src={feature.imageUrl}
-                  alt="placeholder"
-                />
-              </CardFooter>
-            </Card>
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Card className="rounded-br-[80px] shadow-md">
+                <CardHeader className="pb-1">
+                  <div className="size-12 bg-orange-100 rounded-full flex items-center justify-center hover:bg-orange-200 cursor-pointer duration-300 my-2">
+                    {feature.icon}
+                  </div>
+                </CardHeader>
+                <CardContent className="text-left">
+                  <h2 className="mb-1 text-lg font-semibold">{feature.title}</h2>
+                  <p className="leading-snug text-muted-foreground">
+                    {feature.description}
+                  </p>
+                </CardContent>
+                <CardFooter className="justify-end pb-0 pr-0">
+                  <img
+                    className="h-60 w-full rounded-tl-md object-cover object-top rounded-br-[80px]"
+                    src={feature.imageUrl}
+                    alt="placeholder"
+                  />
+                </CardFooter>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

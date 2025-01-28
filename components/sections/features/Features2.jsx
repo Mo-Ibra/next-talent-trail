@@ -1,51 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  BarChartHorizontal,
-  BatteryCharging,
-  CircleHelp,
-  Lamp,
-  Layers,
-  WandSparkles,
-  ZoomIn,
-} from "lucide-react";
 
-const reasons = [
-  {
-    title: "Quality",
-    description: "Many desktop publishing now use and a search for job",
-    icon: <ZoomIn className="size-6 text-orange-500" strokeWidth={3} />,
-  },
-  {
-    title: "Experience",
-    description: "Many desktop publishing now use and a search for job",
-    icon: (
-      <BarChartHorizontal className="size-6 text-orange-500" strokeWidth={3} />
-    ),
-  },
-  {
-    title: "Support",
-    description: "Many desktop publishing now use and a search for job",
-    icon: <CircleHelp className="size-6 text-orange-500" strokeWidth={3} />,
-  },
-  {
-    title: "Innovation",
-    description: "Many desktop publishing now use and a search for job",
-    icon: <WandSparkles className="size-6 text-orange-500" strokeWidth={3} />,
-  },
-  {
-    title: "Results",
-    description: "Many desktop publishing now use and a search for job",
-    icon: <Layers className="size-6 text-orange-500" strokeWidth={3} />,
-  },
-  {
-    title: "Efficiency",
-    description: "Many desktop publishing now use and a search for job",
-    icon: (
-      <BatteryCharging className="size-6 text-orange-500" strokeWidth={3} />
-    ),
-  },
-];
+
+import { features2 } from "@/data/features";
+
+const cardVariants = {
+  hidden: { opacity: 0, x: -50 }, // Start from the left side
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const Features2 = () => {
   return (
@@ -62,9 +27,13 @@ const Features2 = () => {
           </h2>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {reasons.map((reason, i) => (
-            <div
+          {features2.map((reason, i) => (
+            <motion.div
               key={i}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
               className="flex flex-col py-6 shadow-md text-center border rounded-lg"
             >
               <div className="flex size-16 items-center justify-center rounded-full bg-orange-100 mx-auto my-2 hover:bg-orange-200 duration-300 cursor-pointer">
@@ -79,7 +48,7 @@ const Features2 = () => {
               <Button variant="outline" className="mt-4 mx-auto">
                 Read More
               </Button>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
