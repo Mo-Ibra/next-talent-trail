@@ -10,13 +10,14 @@ const Subscribe = () => {
             <div className="flex flex-col gap-4 w-2/3">
               <h3 className="text-2xl font-bold z-20">Explore a job now!</h3>
               <p className="text-muted-foreground text-sm md:text-lg z-20">
-                Search all the open positions on the web. Get your own
-                personalized salary estimate. Read reviews on over 30000+
-                companies worldwide.
+                Search and apply for the latest jobs in IT, Marketing, Sales,
+                Finance, Engineering, and more. Get ahead in your career today!
               </p>
             </div>
             <div className="flex gap-5 items-center z-20">
-              <Button className="bg-orange-600 hover:bg-orange-700">Subscribe</Button>
+              <Button className="bg-orange-600 hover:bg-orange-700">
+                Subscribe
+              </Button>
               <Button variant="outline">Learn More</Button>
             </div>
           </div>

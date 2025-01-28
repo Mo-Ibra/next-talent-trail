@@ -26,9 +26,8 @@ const Hero1 = () => {
               Find Your <span className="text-orange-500">Dream</span> Job Today
             </h1>
             <p className="max-w-xl text-muted-foreground lg:text-xl">
-              Discover thousands of job listings from top companies around the
-              world. Search by keyword, category, or location, and kickstart
-              your career now!
+              Search and apply for the latest jobs in IT, Marketing, Sales,
+              Finance, Engineering, and more. Get ahead in your career today!
             </p>
             <form className="w-full my-4">
               <input

@@ -10,16 +10,12 @@ const Footer = () => {
           <div className="flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start">
             <div>
               <span className="flex items-center justify-center lg:justify-start">
-                <img
-                  src="/logo.svg"
-                  alt="logo"
-                  className="h-11"
-                />
+                <img src="/logo.svg" alt="logo" className="h-11" />
                 <p className="text-3xl font-semibold">Lent Trail</p>
               </span>
               <p className="mt-6 text-sm text-muted-foreground">
-                A collection of 100+ responsive HTML templates for your startup
-                business or side project.
+                Search and apply for the latest jobs in IT, Marketing, Sales,
+                Finance, Engineering, and more. Get ahead in your career today!
               </p>
             </div>
             <ul className="flex items-center space-x-6 text-muted-foreground">
@@ -64,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-20 flex flex-col justify-between gap-4 border-t pt-8 text-center text-sm font-medium text-muted-foreground lg:flex-row lg:items-center lg:text-left">
-          <p>© 2024 Shadcnblocks. All rights reserved.</p>
+          <p>© 2025. All rights reserved.</p>
           <ul className="flex justify-center gap-4 lg:justify-start">
             <li className="hover:text-primary">
               <a href="#"> Terms and Conditions</a>

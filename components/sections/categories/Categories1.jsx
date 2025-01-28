@@ -1,5 +1,6 @@
 import { Brain } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 function Categories1({ categories }) {
   return (
@@ -13,32 +14,32 @@ function Categories1({ categories }) {
             Explore 1500+ Jobs Out There.
           </h2>
           <p className="text-muted-foreground">
-            Discover thousands of job listings from top companies around the
-            world. Search by keyword, category, or location, and kickstart your
-            career now!
+            Search and apply for the latest jobs in IT, Marketing, Sales,
+            Finance, Engineering, and more. Get ahead in your career today!
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
-            >
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-orange-50 group-hover:bg-orange-100 transition-colors duration-200">
-                    {category.icon}
+            <Link href="/job-list/one" key={index}>
+              <Card
+                className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-orange-50 group-hover:bg-orange-100 transition-colors duration-200">
+                      {category.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">{category.title}</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {category.courses}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">{category.title}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {category.courses}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

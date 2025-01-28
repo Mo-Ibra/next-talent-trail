@@ -28,7 +28,7 @@ import {
 
 const MobileNav = () => {
   return (
-    <div className="block lg:hidden">
+    <div className="block lg:hidden z-50">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <img src="/logo.svg" className="w-8" alt="logo" />

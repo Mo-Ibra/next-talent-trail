@@ -19,7 +19,7 @@ import Image from "next/image";
 
 const DesktopNav = () => {
   return (
-    <nav className="hidden justify-between lg:flex">
+    <nav className="hidden justify-between lg:flex z-50">
       <div className="flex items-center gap-6">
         <Link className="flex items-center" href="/">
           <Image src="/logo.svg" alt="logo" width={32} height={32} />

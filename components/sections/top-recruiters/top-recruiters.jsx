@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
 import { companies } from "@/data/companies";
+import Link from "next/link";
 
 function StarRating({ rating }) {
   return (
@@ -56,7 +57,9 @@ function TopRecruiters() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold">{company.name}</h3>
+                    <Link href="/company-profile">
+                      <h3 className="font-semibold">{company.name}</h3>
+                    </Link>
                     <p className="text-sm text-muted-foreground">
                       {company.location}
                     </p>

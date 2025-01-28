@@ -50,8 +50,8 @@ const Hero2 = () => {
           Best Candidates here
         </h1>
         <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-          Find Jobs, Employment & Career Opportunities. Some of the companies
-          we've helped recruit excellent applicants over the years.
+          Search and apply for the latest jobs in IT, Marketing, Sales, Finance,
+          Engineering, and more. Get ahead in your career today!
         </p>
 
         {/* Search Form */}

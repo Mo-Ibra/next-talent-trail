@@ -33,7 +33,7 @@ function Categories2({ categories }) {
                   {category.courses}
                 </p>
                 <Link
-                  href="#"
+                  href="/job-list/one"
                   className="inline-flex items-center text-sm text-orange-600 hover:text-orange-700 font-medium"
                 >
                   Explore Jobs

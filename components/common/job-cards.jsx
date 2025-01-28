@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { LucideArrowUp, Clock, Check, ArrowUpRight, Star } from "lucide-react";
+import Link from "next/link";
 
 const avatars = [
   "/images/avatars/1.png",
@@ -47,7 +48,9 @@ export const ContentFulJobCard = ({ job }) => {
 
           {/* Job Info */}
           <div>
-            <h3 className="font-semibold mb-2">{job.title}</h3>
+            <Link href="/job-detail/one">
+              <h3 className="font-semibold mb-2">{job.title}</h3>
+            </Link>
             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
               <Badge variant="secondary">Fulltime</Badge>
               <div className="flex items-center gap-1">
@@ -66,14 +69,19 @@ export const ContentFulJobCard = ({ job }) => {
                   <AvatarImage src={avatar} />
                 </Avatar>
               ))}
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-500 text-white text-xs border-2 border-white z-50">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-500 text-white text-xs border-2 border-white z-40">
                 +{job.applicants}
               </div>
             </div>
-            <Button variant="outline" className="dark:text-white hover:bg-orange-600">
-              Apply Now
-              <LucideArrowUp className="ml-2 size-4" />
-            </Button>
+            <Link href="/job-apply">
+              <Button
+                variant="outline"
+                className="dark:text-white hover:bg-orange-600"
+              >
+                Apply Now
+                <LucideArrowUp className="ml-2 size-4" />
+              </Button>
+            </Link>
           </div>
 
           {/* Skills */}
@@ -101,7 +109,10 @@ export const BasicJobCard = ({ job }) => {
         <div className="space-y-4">
           {/* Job Type and Time */}
           <div className="flex justify-between items-center text-sm">
-            <Badge variant="secondary" className="bg-orange-50 text-orange-500 dark:bg-orange-500 dark:text-white">
+            <Badge
+              variant="secondary"
+              className="bg-orange-50 text-orange-500 dark:bg-orange-500 dark:text-white"
+            >
               Full Time
             </Badge>
             <Badge variant="outline" className="text-muted-foreground">
@@ -120,7 +131,9 @@ export const BasicJobCard = ({ job }) => {
               />
             </div>
             <div>
+              <Link href="/company-profile">
               <h3 className="font-medium">{job.company.name}</h3>
+              </Link>
               <p className="text-sm text-muted-foreground">
                 {job.company.location}
               </p>
@@ -131,7 +144,9 @@ export const BasicJobCard = ({ job }) => {
 
           {/* Job Title */}
           <div>
-            <h4 className="text-lg font-semibold">{job.title}</h4>
+            <Link href="/job-detail/one">
+              <h4 className="text-lg font-semibold">{job.title}</h4>
+            </Link>
             <p className="text-orange-500 font-medium">${job.salary}/Month</p>
           </div>
         </div>
@@ -152,7 +167,7 @@ export const BasicJobCardWithRating = ({ job }) => {
   return (
     <Card
       key={job.id}
-      className="p-6 hover:shadow-lg duration-200 cursor-pointer"
+      className="p-6 hover:shadow-lg duration-200"
     >
       <div className="flex items-start justify-between">
         <div className="flex gap-4">
@@ -171,7 +186,9 @@ export const BasicJobCardWithRating = ({ job }) => {
                   {job.postedAt}
                 </span>
               </div>
-              <h2 className="text-xl font-semibold">{job.title}</h2>
+              <Link href="/job-detail/one">
+                <h2 className="text-xl font-semibold">{job.title}</h2>
+              </Link>
               <p className="text-sm text-muted-foreground">
                 Total Openings: {job.applicants}
               </p>

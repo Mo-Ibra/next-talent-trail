@@ -55,7 +55,6 @@ function JobDetail2() {
         </Link>
 
         <div className="grid lg:grid-cols-3 gap-8">
-
           {/* Sidebar */}
           <div>
             <div className="lg:col-span-1 lg:top-20 lg:sticky">
@@ -100,15 +99,19 @@ function JobDetail2() {
                 </div>
 
                 <div className="space-y-3">
-                  <Button
-                    className="w-full bg-orange-600 hover:bg-orange-700"
-                    size="lg"
-                  >
-                    Apply Now →
-                  </Button>
-                  <Button variant="outline" className="w-full" size="lg">
-                    Visit Website
-                  </Button>
+                  <Link href="/job-apply">
+                    <Button
+                      className="w-full bg-orange-600 hover:bg-orange-700"
+                      size="lg"
+                    >
+                      Apply Now →
+                    </Button>
+                  </Link>
+                  <Link href="/company-profile">
+                    <Button variant="outline" className="w-full" size="lg">
+                      Visit Profile
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -121,7 +124,11 @@ function JobDetail2() {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <Input placeholder="Your email" type="email" className="dark:border-gray-400" />
+                  <Input
+                    placeholder="Your email"
+                    type="email"
+                    className="dark:border-gray-400"
+                  />
                   <Button className="bg-orange-600 hover:bg-orange-700">
                     Join Newsletter
                   </Button>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 import { BasicJobCard } from "@/components/common/job-cards";
 
-function FeaturedJobs({ jobs }) {
+function FeaturedJobs({ jobs, withButton = true }) {
   return (
     <section className="py-16 px-4 md:px-6 relative">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
@@ -24,9 +24,11 @@ function FeaturedJobs({ jobs }) {
           ))}
         </div>
 
-        <Button className=" bg-orange-600 hover:bg-orange-700 mt-12 mx-auto flex justify-center">
-          Show More
-        </Button>
+        { withButton && (
+          <Button className=" bg-orange-600 hover:bg-orange-700 mt-12 mx-auto flex justify-center">
+            Show More
+          </Button>
+        )}
       </div>
 
       <div className="absolute top-0 left-0 w-full h-1 bg-orange-500"></div>

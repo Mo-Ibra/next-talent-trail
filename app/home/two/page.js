@@ -25,7 +25,7 @@ function HomePageTwo() {
       <Navbar />
       <Hero2 />
       <Categories2 categories={renderedCategories} />
-      <FeaturedJobs jobs={renderedJobs} />
+      <FeaturedJobs jobs={renderedJobs} withButton={false} />
       <Features1 />
       <Team />
       <FAQ1 />

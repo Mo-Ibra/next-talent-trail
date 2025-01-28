@@ -10,7 +10,7 @@ import {
   MapPin,
   Share2Icon,
   TimerIcon,
-  Table2Icon
+  Table2Icon,
 } from "lucide-react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 
@@ -44,7 +44,6 @@ const relatedJobs = [
 function JobDetail1() {
   return (
     <div className="min-h-screen relative py-20">
-      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
         <Link
@@ -195,7 +194,9 @@ function JobDetail1() {
                         </div>
                       </div>
                     </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">{job.timeAgo}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">
+                      {job.timeAgo}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -245,16 +246,20 @@ function JobDetail1() {
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  <Button
-                    className="w-full bg-orange-600 hover:bg-orange-700"
-                    size="lg"
-                  >
-                    Apply Now →
-                  </Button>
-                  <Button variant="outline" className="w-full" size="lg">
-                    Visit Website
-                  </Button>
+                <div>
+                  <Link href="/job-apply">
+                    <Button
+                      className="w-full bg-orange-600 hover:bg-orange-700 my-2"
+                      size="lg"
+                    >
+                      Apply Now →
+                    </Button>
+                  </Link>
+                  <Link href="/company-profile">
+                    <Button variant="outline" className="w-full my-2" size="lg">
+                      Visit Profile
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -267,7 +272,11 @@ function JobDetail1() {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <Input placeholder="Your email" type="email" className="dark:border-gray-400" />
+                  <Input
+                    placeholder="Your email"
+                    type="email"
+                    className="dark:border-gray-400"
+                  />
                   <Button className="bg-orange-600 hover:bg-orange-700">
                     Join Newsletter
                   </Button>

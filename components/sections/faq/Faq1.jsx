@@ -27,7 +27,7 @@ function FAQ1() {
                 className="w-full object-cover"
               />
               {/* Play button overlay */}
-              <div className="absolute inset-0 flex items-center justify-center z-50">
+              <div className="absolute inset-0 flex items-center justify-center z-40">
                 <div className="bg-orange-600 rounded-full p-4 cursor-pointer transition-transform hover:scale-110">
                   <Play className="w-8 h-8 text-white" fill="currentColor" />
                 </div>
@@ -50,9 +50,8 @@ function FAQ1() {
               Frequently Asked Questions
             </h2>
             <p className="text-muted-foreground">
-              Search all the open positions on the web. Get your own
-              personalized salary estimate. Read reviews on over 30000+
-              companies worldwide.
+              Search and apply for the latest jobs in IT, Marketing, Sales,
+              Finance, Engineering, and more. Get ahead in your career today!
             </p>
 
             <Accordion type="single" collapsible className="w-full">
