@@ -31,13 +31,19 @@ const MobileNav = () => {
   return (
     <div className="block lg:hidden z-50">
       <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <Image src="/logo.svg" className="w-8" width={32} height={32} alt="logo" />
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.svg"
+            className="w-8"
+            width={32}
+            height={32}
+            alt="logo"
+          />
           <p className="text-xl font-bold cursor-pointer">
             Lent{" "}
             <span className="text-orange-500 font-bold uppercase">Trail</span>
           </p>
-        </div>
+        </Link>
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon">
@@ -47,7 +53,7 @@ const MobileNav = () => {
           <SheetContent className="overflow-y-auto">
             <SheetHeader>
               <SheetTitle>
-                <div className="flex items-center">
+                <Link href="/" className="flex items-center">
                   <Image
                     src="/logo.svg"
                     className="w-8"
@@ -61,7 +67,7 @@ const MobileNav = () => {
                       Trail
                     </span>
                   </p>
-                </div>
+                </Link>
               </SheetTitle>
             </SheetHeader>
             <div className="mb-8 mt-8 flex flex-col gap-4">
