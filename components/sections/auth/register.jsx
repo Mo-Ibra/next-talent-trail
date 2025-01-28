@@ -1,16 +1,35 @@
+"use client";
+
 import { FcGoogle } from "react-icons/fc";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { LogIn } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Register = () => {
+
+  const animationVariants = {
+    hidden: { opacity: 0, x: -100, y: 0 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section className="py-32 px-4 md:px-6 relative">
+    <section className="pt-40 pb-20 px-4 md:px-6 relative">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-4">
-          <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow border">
+          <motion.div
+            variants={animationVariants}
+            initial="hidden"
+            animate="visible"
+            className="mx-auto w-full max-w-sm rounded-md p-6 shadow border"
+          >
             <div className="mb-6 flex flex-col items-center">
               <img
                 src="/logo.svg"
@@ -51,7 +70,7 @@ const Register = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
