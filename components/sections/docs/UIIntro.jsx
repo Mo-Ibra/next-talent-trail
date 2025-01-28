@@ -1,4 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const UIIntro = () => {
   return (
@@ -15,36 +17,34 @@ const UIIntro = () => {
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-400 my-4">
         How to Install:
       </h3>
-      <pre className="bg-gray-100 p-4 rounded-md text-gray-800">
-        <code>npm install shadcn-ui</code>
-      </pre>
+      <SyntaxHighlighter language="bash" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+        npm install shadcn-ui
+      </SyntaxHighlighter>
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-400 my-4">
         And After that you can install any component you want from ShadCN UI
       </h3>
-      <pre className="bg-gray-100 p-4 rounded-md text-gray-800">
-        <code>npx shadcn@latest add card</code>
-      </pre>
+      <SyntaxHighlighter language="bash" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+        npx shadcn@latest add card
+      </SyntaxHighlighter>
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-400 my-4">
         Example: Card
       </h3>
-      <pre className="bg-gray-100 p-4 rounded-md text-gray-800">
-        <code>
-          {`import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+      <SyntaxHighlighter language="javascript" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+        {`import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 export default function Example() {
   return (
-  <Card>
-    <CardHeader>
-      <CardTitle>Example Card</CardTitle>
-    </CardHeader>
-    <CardContent>
-      This is a customizable card using ShadCN UI.
-    </CardContent>
-  </Card>
+    <Card>
+      <CardHeader>
+        <CardTitle>Example Card</CardTitle>
+      </CardHeader>
+      <CardContent>
+        This is a customizable card using ShadCN.
+      </CardContent>
+    </Card>
   );
 }`}
-        </code>
-      </pre>
+      </SyntaxHighlighter>
 
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-400 my-4">
         Here we go.

@@ -7,9 +7,11 @@ import {
 import { 
   LucideHome, LucideArrowBigDown, LucideArrowBigUp, LucideArrowUp, LucideArrowDown, 
   LucideSearch, LucideUser, LucideHeart, LucideBell, LucideMail, LucidePhone, LucideStar, 
-  LucideThumbsUp, LucideTwitter, LucideInstagram, LucideLinkedin, LucideGithub, LucideCode, 
+  LucideThumbsUp, LucideActivity, LucideAirplay, LucideAnvil, LucideBadgeX, LucideCode, 
   LucidePlus, LucideMinus, LucideX
 } from "lucide-react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const IconsSection = () => {
   return (
@@ -26,86 +28,88 @@ const IconsSection = () => {
         <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-400">
           Example Usage
         </h2>
-        <pre className="bg-gray-100 p-4 rounded-md text-gray-800 dark:text-gray-400">
-          <code>
-            {`import { FaHome } from "react-icons/fa";
+
+        {/* React Icons Code Example */}
+        <SyntaxHighlighter language="javascript" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+          {`import { FaHome } from "react-icons/fa";
 
 <FaHome />`}
-          </code>
-        </pre>
-        <pre className="bg-gray-100 p-4 rounded-md text-gray-800 dark:text-gray-400">
-          <code>
-            {`import { LucideHome } from "lucide-react";
+        </SyntaxHighlighter>
+
+        {/* Lucide Icons Code Example */}
+        <SyntaxHighlighter language="javascript" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+          {`import { LucideHome } from "lucide-react";
 
 <LucideHome />`}
-          </code>
-        </pre>
+        </SyntaxHighlighter>
+
         <div>
           <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-400 my-2">
             React Icons:
           </h2>
           <div className="flex flex-wrap">
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaHome />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            {/* More React Icons */}
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaFacebook />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaTwitch />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaSearch />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaUser />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaHeart />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaBell />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaCog />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaEnvelope />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaPhone />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaStar />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaThumbsUp />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaTwitter />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaInstagram />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaLinkedin />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaGithub />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaCode />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaBars />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaPlus />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaMinus />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <FaTimes />
             </div>
           </div>
@@ -114,73 +118,72 @@ const IconsSection = () => {
             Lucide Icons:
           </h2>
           <div className="flex flex-wrap">
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideHome />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            {/* More Lucide Icons */}
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideArrowBigDown />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideArrowBigUp />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideArrowUp />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideArrowDown />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideSearch />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideUser />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideHeart />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideBell />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideMail />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucidePhone />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideStar />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideThumbsUp />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
-              <LucideTwitter />
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
+              <LucideActivity />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
-              <LucideInstagram />
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
+              <LucideAirplay />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
-              <LucideLinkedin />
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
+              <LucideAnvil />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
-              <LucideGithub />
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
+              <LucideBadgeX />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideCode />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucidePlus />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideMinus />
             </div>
-            <div className="m-2 bg-white shadow-md p-4 border cursor-pointer flex items-center justify-center">
+            <div className="m-2 bg-white dark:bg-darkgray shadow-md p-4 border cursor-pointer flex items-center justify-center">
               <LucideX />
             </div>
           </div>
         </div>
-
-        {/* Installation Section */}
       </div>
     </div>
   );

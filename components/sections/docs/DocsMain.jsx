@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import OverviewIntro from "./OverviewIntro";
 import FeaturesSection from "./Features";
 import TechStackSection from "./TechStack";
@@ -13,8 +11,6 @@ import IconsSection from "./Icons";
 import ChangelogSection from "./Changelog";
 import ContactSection from "./Contact";
 import DocsSidebar from "./Sidebar";
-
-
 
 function TalentTrailDocs() {
   return (

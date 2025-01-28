@@ -1,3 +1,6 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 const InstallationSection = () => {
   return (
     <div id="installation">
@@ -7,24 +10,25 @@ const InstallationSection = () => {
       <ol className="ml-6 list-decimal text-gray-600 space-y-2">
         <li>
           Clone the repository:
-          <pre className="bg-gray-100 p-4 rounded-md text-gray-800 mt-2">
-            <code>git clone https://github.com/your-repo/talent-trail.git</code>
-          </pre>
+          <SyntaxHighlighter language="bash" style={oneDark} className="bg-gray-100 p-4 rounded-md mt-2">
+            git clone https://github.com/your-repo/talent-trail.git
+          </SyntaxHighlighter>
         </li>
         <li>
           Install dependencies:
-          <pre className="bg-gray-100 p-4 rounded-md text-gray-800 mt-2">
-            <code>npm install</code>
-          </pre>
+          <SyntaxHighlighter language="bash" style={oneDark} className="bg-gray-100 p-4 rounded-md mt-2">
+            npm install
+          </SyntaxHighlighter>
         </li>
         <li>
           Run the development server:
-          <pre className="bg-gray-100 p-4 rounded-md text-gray-800 mt-2">
-            <code>npm run dev</code>
-          </pre>
+          <SyntaxHighlighter language="bash" style={oneDark} className="bg-gray-100 p-4 rounded-md mt-2">
+            npm run dev
+          </SyntaxHighlighter>
         </li>
       </ol>
     </div>
   );
 };
+
 export default InstallationSection;

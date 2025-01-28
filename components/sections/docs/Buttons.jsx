@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const ButtonsSection = () => {
   return (
@@ -10,9 +12,10 @@ const ButtonsSection = () => {
         <p className="text-gray-600">
           You can easily create your button with Tailwind CSS classes.
         </p>
-        <pre className="bg-gray-100 p-4 rounded-md text-gray-800">
-          <code>
-            {`<div className="flex flex-wrap gap-4">
+
+        {/* Tailwind Buttons Code Example */}
+        <SyntaxHighlighter language="html" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+          {`<div className="flex flex-wrap gap-4">
   <button className="px-4 py-2 bg-blue-500 text-white rounded-md">
     Primary
   </button>
@@ -32,8 +35,9 @@ const ButtonsSection = () => {
     Success
   </button>
 </div>`}
-          </code>
-        </pre>
+        </SyntaxHighlighter>
+
+        {/* Render buttons */}
         <div className="flex flex-wrap gap-4">
           <button className="px-4 py-2 bg-blue-500 text-white rounded-md">
             Primary
@@ -54,19 +58,20 @@ const ButtonsSection = () => {
             Success
           </button>
         </div>
+
         <p className="text-gray-600">You can use shadcn ready button as well</p>
 
-        <pre className="bg-gray-100 p-4 rounded-md text-gray-800">
-          <code>
-            {`<Button className="m-2" variant="default">default</Button>
+        {/* ShadCN UI Buttons Code Example */}
+        <SyntaxHighlighter language="html" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+          {`<Button className="m-2" variant="default">default</Button>
 <Button variant="destructive">destructive</Button>
 <Button variant="outline">outline</Button>
 <Button variant="secondary">secondary</Button>
 <Button variant="ghost">ghost</Button>
 <Button variant="link">link</Button>`}
-          </code>
-        </pre>
+        </SyntaxHighlighter>
 
+        {/* Render ShadCN buttons */}
         <Button className="m-2" variant="default">
           default
         </Button>

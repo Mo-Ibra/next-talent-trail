@@ -1,4 +1,6 @@
 import { Input } from "@/components/ui/input";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const InputsSection = () => {
   return (
@@ -11,20 +13,27 @@ const InputsSection = () => {
           You can easily create and customize your input with Tailwind CSS
           classes.
         </p>
-        <pre className="bg-gray-100 p-4 rounded-md text-gray-800">
-          <code>
-            {`<input type="text" className="border border-gray-300 p-2 rounded-md" placeholder="Enter your name" />`}
-          </code>
-        </pre>
+
+        {/* Tailwind Input Code Example */}
+        <SyntaxHighlighter language="html" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+          {`<input type="text" className="border border-gray-300 p-2 rounded-md" placeholder="Enter your name" />`}
+        </SyntaxHighlighter>
+
+        {/* Render input */}
         <input
           type="text"
           className="border border-gray-300 p-2 rounded-md"
           placeholder="Enter your name"
         />
+        
         <p className="text-gray-600">You can use shadcn ready input as well</p>
-        <pre className="bg-gray-100 p-4 rounded-md text-gray-800">
-          <code>{`<Input placeholder="Enter your name" />`}</code>
-        </pre>
+
+        {/* ShadCN UI Input Code Example */}
+        <SyntaxHighlighter language="html" style={oneDark} className="bg-gray-100 p-4 rounded-md">
+          {`<Input placeholder="Enter your name" />`}
+        </SyntaxHighlighter>
+
+        {/* Render ShadCN input */}
         <Input placeholder="Enter your name" />
       </div>
     </div>
