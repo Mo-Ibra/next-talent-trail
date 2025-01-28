@@ -20,7 +20,7 @@ function FAQ1() {
             {/* Main image */}
             <div className="relative rounded-2xl overflow-hidden">
               <Image
-                src="/images/3.jpg"
+                src="/images/hero/6.jpg"
                 alt="Professional woman celebrating"
                 width={640}
                 height={400}
@@ -35,7 +35,7 @@ function FAQ1() {
               {/* Thumbnail overlay */}
               <div className="absolute -bottom-12 -right-12 w-72 h-72 rounded-2xl overflow-hidden border-8 border-white shadow-lg">
                 <Image
-                  src="/images/5.jpg"
+                  src="/images/features/5.jpg"
                   alt="Professional woman with laptop"
                   width={300}
                   height={300}

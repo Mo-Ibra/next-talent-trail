@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Categories1({ categories }) {
   return (
-    <section className="py-32 relative">
+    <section className="py-40 md:py-16 lg:32 relative">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-orange-500 font-medium mb-3">

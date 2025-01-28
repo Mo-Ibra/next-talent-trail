@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const cardVariants = {
   hidden: (index) => ({
     opacity: 0,
-    x: index % 2 === 0 ? -50 : 50,
+    x: index % 2 === 0 ? -20 : 20,
   }),
   visible: {
     opacity: 1,

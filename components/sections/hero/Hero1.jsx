@@ -105,7 +105,7 @@ const Hero1 = () => {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className="absolute top-0 left-0 bg-white dark:bg-darkgray dark:border dark:border-gray-800 rounded-lg shadow-lg p-6 flex items-center gap-4"
+              className="absolute top-0 left-0 bg-white dark:bg-darkgray dark:border dark:border-gray-800 rounded-lg shadow-lg p-6 flex items-center gap-4 animate-bounce"
             >
               <div className="bg-orange-500/10 rounded-lg">
                 <ArrowBigUp className="size-10 text-orange-500" />
