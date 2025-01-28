@@ -1,4 +1,4 @@
-import { Book, Sunset, Trees, Zap } from "lucide-react";
+import { Book, Sunset, Trees, Zap, Users, Users2 } from "lucide-react";
 
 // Home
 export const subMenuItemsHome = [
@@ -179,31 +179,31 @@ export const subMenuItemsUtils = [
   {
     title: "Login",
     description: "You can login to your account from here",
-    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    icon: <Users className="size-5 shrink-0 text-orange-500" />,
     href: "/auth/login",
   },
   {
     title: "Register",
     description: "You can register a new account from here",
-    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    icon: <Users2 className="size-5 shrink-0 text-orange-500" />,
     href: "/auth/sign-up",
   },
   {
     title: "Forgot Password",
     description: "You can reset your password from here",
-    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    icon: <Sunset className="size-5 shrink-0 text-orange-500" />,
     href: "/auth/forget-password",
   },
   {
     title: "Coming Soon",
     description: "This page is for coming soon",
-    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    icon: <Book className="size-5 shrink-0 text-orange-500" />,
     href: "/coming-soon",
   },
   {
     title: "Maintenance",
     description: "This page is for maintenance",
-    icon: <Zap className="size-5 shrink-0 text-orange-500" />,
+    icon: <Trees className="size-5 shrink-0 text-orange-500" />,
     href: "/maintenance",
   },
   {
