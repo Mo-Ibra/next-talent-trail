@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Play, Briefcase } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const popularSearches = [
   "Designer",
@@ -36,23 +37,49 @@ const Hero3 = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative z-10"
+      >
         <div className="container mx-auto px-4 py-16">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 items-center">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="grid lg:grid-cols-2 grid-cols-1 gap-12 items-center"
+          >
             <div className="max-w-xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+              <motion.h1
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
+              >
                 Find a new job and
                 <br />
                 build career
-              </h1>
-              <p className="text-lg text-white dark:text-gray-400 mb-8">
+              </motion.h1>
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+                className="text-lg text-white dark:text-gray-400 mb-8"
+              >
                 Find Jobs, Employment & Career Opportunities. Some of the
                 companies we've helped recruit excellent applicants over the
                 years.
-              </p>
+              </motion.p>
 
               {/* Search Form */}
-              <form onSubmit={handleSearch} className="mb-6">
+              <motion.form
+                onSubmit={handleSearch}
+                className="mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              >
                 <div className="flex">
                   <div className="relative flex-1">
                     <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -73,10 +100,15 @@ const Hero3 = () => {
                     </Button>
                   </Link>
                 </div>
-              </form>
+              </motion.form>
 
               {/* Popular Searches */}
-              <div className="flex flex-wrap items-center gap-2 text-white dark:text-gray-400">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                className="flex flex-wrap items-center gap-2 text-white dark:text-gray-400"
+              >
                 <span className="text-white/80">Popular Searches :</span>
                 {popularSearches.map((term, index) => (
                   <button
@@ -90,11 +122,11 @@ const Hero3 = () => {
                     )}
                   </button>
                 ))}
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

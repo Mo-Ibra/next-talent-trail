@@ -1,5 +1,7 @@
-import { ArrowDownRight, ArrowBigUp, DamIcon, UploadCloud } from "lucide-react";
+"use client";
 
+import { motion } from "framer-motion";
+import { ArrowDownRight, ArrowBigUp, DamIcon, UploadCloud } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -7,11 +9,29 @@ import Image from "next/image";
 
 const Hero4 = () => {
   return (
-    <section className="py-12 grid justify-center items-center h-[100vh] relative md:overflow-hidden dark:bg-darkbackground">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="py-12 grid justify-center items-center h-[100vh] relative md:overflow-hidden dark:bg-darkbackground"
+    >
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="grid items-center gap-8 lg:grid-cols-2">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.8 } },
+          }}
+          className="grid items-center gap-8 lg:grid-cols-2"
+        >
           {/* Left Content (Image Section) */}
-          <div className="mx-auto relative my-4 z-20 lg:block hidden">
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mx-auto relative my-4 z-20 lg:block hidden"
+          >
             <Image
               src="/images/hero/9.png"
               alt="placeholder hero"
@@ -21,7 +41,12 @@ const Hero4 = () => {
             />
 
             {/* Card */}
-            <div className="absolute top-20 left-0 bg-white dark:bg-darkgray dark:border dark:border-gray-800 rounded-lg shadow-lg p-6 flex items-center gap-4 animate-bounce">
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="absolute top-20 left-0 bg-white dark:bg-darkgray dark:border dark:border-gray-800 rounded-lg shadow-lg p-6 flex items-center gap-4"
+            >
               <div className="bg-orange-500/10 rounded-lg">
                 <ArrowBigUp className="size-10 text-orange-500" />
               </div>
@@ -30,22 +55,32 @@ const Hero4 = () => {
                   Find your great Job Today!
                 </h3>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Content */}
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left xl:mb-40">
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col items-center text-center lg:items-start lg:text-left xl:mb-40"
+          >
             <Badge variant="outline">
               Find Your Dream Job
               <ArrowDownRight className="ml-2 size-4" />
             </Badge>
-            <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
+            <motion.h1
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="my-6 text-pretty text-4xl font-bold lg:text-6xl"
+            >
               Find Your <span className="text-orange-500">Dream</span> Job Today
-            </h1>
+            </motion.h1>
             <p className="max-w-xl text-muted-foreground lg:text-xl">
               Discover thousands of job listings from top companies around the
-              world. Search by keyword, category, or location, and kickstart
-              your career now!
+              world. Search by keyword, category, or location, and kickstart your
+              career now!
             </p>
             <form className="w-full my-4">
               <input
@@ -67,17 +102,26 @@ const Hero4 = () => {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-96 h-96 bg-orange-500/20 opacity-20 rounded-full blur-3xl top-20 -left-20"></div>
-        <UploadCloud className="absolute w-96 h-96 text-orange-500/5 -bottom-10 -right-20 z-10" />
-        <DamIcon className="absolute w-96 h-96 text-orange-500/5 top-20 -left-20 z-10" />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 0.2, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="absolute w-96 h-96 bg-orange-500/20 opacity-20 rounded-full blur-3xl top-20 -left-20"
+        />
+        <UploadCloud
+          className="absolute w-96 h-96 text-orange-500/5 -bottom-10 -right-20 z-10"
+        />
+        <DamIcon
+          className="absolute w-96 h-96 text-orange-500/5 top-20 -left-20 z-10"
+        />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

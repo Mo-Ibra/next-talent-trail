@@ -1,26 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
-
 import { companies } from "@/data/companies";
 import Link from "next/link";
+import StarRating from "@/components/common/star-rating";
+import { motion } from "framer-motion";
 
-function StarRating({ rating }) {
-  return (
-    <div className="flex">
-      {[...Array(5)].map((_, i) => (
-        <Star
-          key={i}
-          className={`w-4 h-4 ${
-            i < rating ? "text-orange-400 fill-orange-400" : "text-gray-300"
-          }`}
-        />
-      ))}
-    </div>
-  );
-}
+const cardVariants = {
+  hidden: (index) => ({
+    opacity: 0,
+    x: index % 2 === 0 ? -50 : 50,
+  }),
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 function TopRecruiters() {
   return (
@@ -39,41 +38,50 @@ function TopRecruiters() {
 
         <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5">
           {companies.map((company, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start">
-                    <div className="relative w-12 h-12">
-                      <Image
-                        src={company.logo}
-                        alt={company.name}
-                        fill
-                        className="rounded-lg object-cover"
-                      />
+            <motion.div
+              key={index}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-start">
+                      <div className="relative w-12 h-12">
+                        <Image
+                          src={company.logo}
+                          alt={company.name}
+                          fill
+                          className="rounded-lg object-cover"
+                        />
+                      </div>
+                      <Badge variant="outline" className=" text-orange-500">
+                        {company.jobs} Jobs
+                      </Badge>
                     </div>
-                    <Badge variant="outline" className=" text-orange-500">
-                      {company.jobs} Jobs
-                    </Badge>
-                  </div>
 
-                  <div>
-                    <Link href="/company-profile">
-                      <h3 className="font-semibold">{company.name}</h3>
-                    </Link>
-                    <p className="text-sm text-muted-foreground">
-                      {company.location}
-                    </p>
-                  </div>
+                    <div>
+                      <Link href="/company-profile">
+                        <h3 className="font-semibold">{company.name}</h3>
+                      </Link>
+                      <p className="text-sm text-muted-foreground">
+                        {company.location}
+                      </p>
+                    </div>
 
-                  <div className="flex items-center gap-2">
-                    <StarRating rating={company.rating} />
-                    <span className="text-sm text-muted-foreground">
-                      ({company.reviews})
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <StarRating rating={company.rating} />
+                      <span className="text-sm text-muted-foreground">
+                        ({company.reviews})
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
 

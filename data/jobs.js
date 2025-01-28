@@ -61,7 +61,7 @@ export const jobs = [
     title: "Ceo",
     salary: 15000,
     description:
-      "A CEO (Chief Executive Officer) is the top executive of a company.",
+      "A CEO (Chief Executive Officer) is the top executive of a company or organization.",
     applicants: 14,
     skills: ["AdobeXd", "Figma", "Photoshop", "Corel"],
     postedTime: "7 Hours ago",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -44,18 +45,34 @@ const Hero2 = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <motion.h1
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           You can find the
           <br />
           Best Candidates here
-        </h1>
-        <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+        </motion.h1>
+        <motion.p
+          className="text-lg text-white/90 mb-8 max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 1 }}
+        >
           Search and apply for the latest jobs in IT, Marketing, Sales, Finance,
           Engineering, and more. Get ahead in your career today!
-        </p>
+        </motion.p>
 
         {/* Search Form */}
-        <form onSubmit={handleSearch} className="max-w-4xl mx-auto mb-6">
+        <motion.form
+          onSubmit={handleSearch}
+          className="max-w-4xl mx-auto mb-6"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
               <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -90,24 +107,30 @@ const Hero2 = () => {
               </Button>
             </Link>
           </div>
-        </form>
+        </motion.form>
 
         {/* Popular Searches */}
-        <div className="flex flex-wrap items-center justify-center gap-2 text-white">
+        <motion.div
+          className="flex flex-wrap items-center justify-center gap-2 text-white"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           <span className="text-white/80">Popular Searches :</span>
           {popularSearches.map((term, index) => (
-            <button
+            <motion.button
               key={index}
               onClick={() => setKeywords(term)}
+              whileHover={{ scale: 1.1, color: "#F97316" }}
               className="text-white hover:text-orange-300 transition-colors"
             >
               {term}
               {index < popularSearches.length - 1 && (
                 <span className="ml-2">•</span>
               )}
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
