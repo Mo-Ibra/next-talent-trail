@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 
 import { logos } from "@/data/logos";
+import Image from "next/image";
 
 const Logos = () => {
   return (
@@ -32,10 +33,12 @@ const Logos = () => {
                 >
                   <div className="mx-10 flex shrink-0 items-center justify-center">
                     <div>
-                      <img
+                      <Image
                         src={logo.image}
                         alt={logo.description}
-                        className="h-7 w-auto"
+                        className="h-8 w-auto"
+                        width={32}
+                        height={32}
                       />
                     </div>
                   </div>

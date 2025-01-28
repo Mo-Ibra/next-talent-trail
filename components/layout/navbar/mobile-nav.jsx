@@ -25,13 +25,14 @@ import {
   subMenuItemsPages,
   subMenuItemsHome,
 } from "./subMenu";
+import Image from "next/image";
 
 const MobileNav = () => {
   return (
     <div className="block lg:hidden z-50">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
-          <img src="/logo.svg" className="w-8" alt="logo" />
+          <Image src="/logo.svg" className="w-8" width={32} height={32} alt="logo" />
           <p className="text-xl font-bold cursor-pointer">
             Lent{" "}
             <span className="text-orange-500 font-bold uppercase">Trail</span>
@@ -47,10 +48,12 @@ const MobileNav = () => {
             <SheetHeader>
               <SheetTitle>
                 <div className="flex items-center">
-                  <img
+                  <Image
                     src="/logo.svg"
                     className="w-8"
                     alt="logo"
+                    width={32}
+                    height={32}
                   />
                   <p className="text-xl font-bold cursor-pointer">
                     lent{" "}

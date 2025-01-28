@@ -10,6 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { features } from "@/data/features";
 import { Lamp } from "lucide-react";
+import Image from "next/image";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -52,10 +53,12 @@ const Features1 = () => {
                   </p>
                 </CardContent>
                 <CardFooter className="justify-end pb-0 pr-0">
-                  <img
+                  <Image
                     className="h-60 w-full rounded-tl-md object-cover object-top rounded-br-[80px]"
                     src={feature.imageUrl}
                     alt="placeholder"
+                    width={400}
+                    height={400}
                   />
                 </CardFooter>
               </Card>

@@ -15,32 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { FireExtinguisherIcon, HomeIcon } from "lucide-react";
 import Link from "next/link";
 
-const testimonials = [
-  {
-    quote:
-      "Listing our jobs through JobBoard was simple, quick, and helped us find amazing candidates.",
-    author: "Lisa Smith",
-    role: "developer at AppyYou",
-    avatar: "/images/avatars/1.png",
-    isVisible: false,
-  },
-  {
-    quote:
-      "Listing our jobs through JobBoard was simple, quick, and helped us find amazing candidates.",
-    author: "Mark Mills",
-    role: "developer at App.com",
-    avatar: "/images/avatars/2.png",
-    isVisible: true,
-  },
-  {
-    quote:
-      "Listing our jobs through JobBoard was simple, quick, and helped us find amazing candidates.",
-    author: "Lisa Smith",
-    role: "developer at AppyYou",
-    avatar: "/images/avatars/3.png",
-    isVisible: false,
-  },
-];
+import { testimonials2 } from "@/data/testimonials";
 
 export default function PostJob() {
   const [formData, setFormData] = useState({
@@ -397,7 +372,7 @@ export default function PostJob() {
       <div className="hidden lg:block bg-gradient-to-br from-blue-50 to-purple-50 dark:from-darkbackground dark:to-darkbackground fixed top-0 right-0 w-1/2 h-full">
         <div className="absolute inset-0 p-12 overflow-auto grid justify-center items-center">
           <div className="space-y-8 max-w-[34rem]">
-            {testimonials.map((testimonial, index) => (
+            {testimonials2.map((testimonial, index) => (
               <div
                 key={index}
                 className={`bg-white dark:bg-darkgray rounded-lg p-6 shadow-sm border border-orange-300 opacity-15 duration-300 hover:opacity-100 cursor-pointer ${

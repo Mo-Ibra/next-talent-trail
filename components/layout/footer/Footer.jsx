@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 import { menu } from "./menu";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start">
             <div>
               <span className="flex items-center justify-center lg:justify-start">
-                <img src="/logo.svg" alt="logo" className="h-11" />
+                <Image src="/logo.svg" alt="logo" className="h-8" width={32} height={32} />
                 <p className="text-3xl font-semibold">Lent Trail</p>
               </span>
               <p className="mt-6 text-sm text-muted-foreground">

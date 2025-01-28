@@ -108,3 +108,30 @@ export const testimonials = [
     rating: 5,
   },
 ];
+
+export const testimonials2 = [
+  {
+    quote:
+      "Listing our jobs through JobBoard was simple, quick, and helped us find amazing candidates.",
+    author: "Lisa Smith",
+    role: "developer at AppyYou",
+    avatar: "/images/avatars/1.png",
+    isVisible: false,
+  },
+  {
+    quote:
+      "Listing our jobs through JobBoard was simple, quick, and helped us find amazing candidates.",
+    author: "Mark Mills",
+    role: "developer at App.com",
+    avatar: "/images/avatars/2.png",
+    isVisible: true,
+  },
+  {
+    quote:
+      "Listing our jobs through JobBoard was simple, quick, and helped us find amazing candidates.",
+    author: "Lisa Smith",
+    role: "developer at AppyYou",
+    avatar: "/images/avatars/3.png",
+    isVisible: false,
+  },
+];
