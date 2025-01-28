@@ -1,10 +1,63 @@
-export const plans = ["Hobby", "Basic", "Business", "Enterprise"];
+export const plans = [
+  {
+    id: 1,
+    name: "Hobby",
+    price: 12,
+    description:
+      "For hobby, staging sites, and side hustles and personal projects.",
+    features: [
+      "2 pages",
+      "Limited traffic",
+      "50 form submissions",
+      "1,000 visitors/mo",
+    ],
+  },
+  {
+    id: 2,
+    name: "Basic",
+    price: 34,
+    description: "For relatively simple, static sites and landing pages.",
+    features: [
+      "150 pages",
+      "Custom domain",
+      "200 form submissions",
+      "10,000 visitors/mo",
+    ],
+  },
+  {
+    id: 3,
+    name: "Business",
+    price: 47,
+    description: "For larger sites, blogs, and other data-driven content.",
+    features: [
+      "150 pages",
+      "Custom domain",
+      "500 form submissions",
+      "50,000 visitors/mo",
+    ],
+    highlighted: true,
+  },
+  {
+    id: 4,
+    name: "Enterprise",
+    price: 79,
+    description: "For those needing an enterprise-grade solution.",
+    features: [
+      "150 pages",
+      "Custom domain",
+      "500 form submissions",
+      "50,000 visitors/mo",
+    ],
+  },
+];
 
 export const plansFeatures = [
   {
+    id: 1,
     title: "Key features",
     features: [
       {
+        id: 1,
         name: "Translated Words",
         values: {
           Hobby: "5,000", 
@@ -14,6 +67,7 @@ export const plansFeatures = [
         },
       },
       {
+        id: 2,
         name: "Search Page Limit",
         values: {
           Hobby: "100",
@@ -23,6 +77,7 @@ export const plansFeatures = [
         },
       },
       {
+        id: 3,
         name: "Custom Fonts",
         values: {
           Hobby: true,
@@ -32,6 +87,7 @@ export const plansFeatures = [
         },
       },
       {
+        id: 4,
         name: "Code Editor",
         values: {
           Hobby: false,
@@ -43,9 +99,11 @@ export const plansFeatures = [
     ],
   },
   {
+    id: 2,
     title: "Hosting",
     features: [
       {
+        id: 5,
         name: "Bandwidth",
         values: {
           Hobby: "100MB",
@@ -55,6 +113,7 @@ export const plansFeatures = [
         },
       },
       {
+        id: 6,
         name: "Visitors",
         values: {
           Hobby: "1,000",
@@ -64,6 +123,7 @@ export const plansFeatures = [
         },
       },
       {
+        id: 7,
         name: "Max Upload Size",
         values: {
           Hobby: "5MB",
@@ -73,6 +133,7 @@ export const plansFeatures = [
         },
       },
       {
+        id: 8,
         name: "SSL Certificate",
         values: {
           Hobby: true,
@@ -84,9 +145,11 @@ export const plansFeatures = [
     ],
   },
   {
+    id: 3,
     title: "Creation",
     features: [
       {
+        id: 9,
         name: "Created Words",
         values: {
           Hobby: "Unlimited",
@@ -96,6 +159,7 @@ export const plansFeatures = [
         },
       },
       {
+        id: 10,
         name: "Team Projects",
         values: {
           Hobby: false,

@@ -5,60 +5,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Printer } from "lucide-react";
 
-const plans = [
-  {
-    name: "Hobby",
-    price: 12,
-    description:
-      "For hobby, staging sites, and side hustles and personal projects.",
-    features: [
-      "2 pages",
-      "Limited traffic",
-      "50 form submissions",
-      "1,000 visitors/mo",
-    ],
-  },
-  {
-    name: "Basic",
-    price: 34,
-    description: "For relatively simple, static sites and landing pages.",
-    features: [
-      "150 pages",
-      "Custom domain",
-      "200 form submissions",
-      "10,000 visitors/mo",
-    ],
-  },
-  {
-    name: "Business",
-    price: 47,
-    description: "For larger sites, blogs, and other data-driven content.",
-    features: [
-      "150 pages",
-      "Custom domain",
-      "500 form submissions",
-      "50,000 visitors/mo",
-    ],
-    highlighted: true,
-  },
-  {
-    name: "Enterprise",
-    price: 79,
-    description: "For those needing an enterprise-grade solution.",
-    features: [
-      "150 pages",
-      "Custom domain",
-      "500 form submissions",
-      "50,000 visitors/mo",
-    ],
-  },
-];
+import { plans } from "@/data/plans";
 
 function Pricing() {
   const [isYearly, setIsYearly] = React.useState(true);
 
   const getPrice = (price) => {
-    const yearlyPrice = price * 12 * 0.8; // 20% discount
+    const yearlyPrice = price * 12 * 0.8;
     return isYearly ? (yearlyPrice / 12).toFixed(0) : price;
   };
 
@@ -102,7 +55,7 @@ function Pricing() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan) => (
             <Card
-              key={plan.name}
+              key={plan.id}
               className={
                 plan.highlighted
                   ? "bg-slate-900 text-slate-50 dark:bg-darkbackground dark:text-gray-400"
