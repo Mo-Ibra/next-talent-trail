@@ -1,6 +1,6 @@
 # Talent Trail 🌟
 
-Talent Trail is a modern job board application built with **Next.js**, **Tailwind CSS**, and **ShadCN UI**. It connects job seekers and employers seamlessly, offering advanced features like job filtering, user authentication, and more.
+Talent Trail is a modern job board application built with **Next.js**, **Tailwind CSS**, and **ShadCN UI**. It connects job seekers and employers seamlessly, offering advanced features like job filtering.
 
 **Let Talent Trail lead the way to your next career adventure!**
 
